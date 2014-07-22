@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<rss version="2.0">
+  <channel>
+    <title>International Gourmet Foods News &amp; Events</title> 
+    <link>http://igf-inc.com/events.html</link>
+    <description>Get the latest on events we showcase and promotional offers </description>
+
+    <item>
+       <title>Product Showcase</title>
+       <mainpicture></mainpicture><!-- the name after location (i.e. "img.jpg") - put all pictures in img/events/ -->
+       <description>
+          <![CDATA[
+            <p>
+               Trade Only Please 
+            </p>
+            <p>
+              Monday, July 21, 2014<br/>
+              Embassy Suites North Charleston – Airport/Hotel & Convention Center<br />
+              Ballroom C
+            </p>
+          ]]>
+      </description>
+      <address>
+        5055 International Boulevard North Charleston, SC 29418
+      </address>
+    </item>
+      
+  </channel>
+</rss>
