@@ -2999,14 +2999,20 @@ ul.inline-list li i:hover { color: #e0cc92; }
 
 .awesome { background: red; }
 
-.txt-middle { font-size: 1.7em; }
-
 .line-small { background: #cccccc; margin: 0px 0 15px; border: none; height: 1px; }
 
 .services-list { margin-bottom: 1em; }
 
-#mapSpringfield { height: 130px; }
+.address-box { -webkit-border-radius: 5px; -moz-border-radius: 5px; -ms-border-radius: 5px; -o-border-radius: 5px; border-radius: 5px; border: 1px solid #cccccc; background: #ededed; padding: 1px 10px; color: #4a4d50; font-size: .9rem; }
 
-#mapCharleston { height: 200px; }
+.txt-middle { font-size: 1.7em; }
 
-#mapAtlanta { height: 220px; }
+.ind-bot-5 { margin-bottom: 5px; }
+
+.ind-bot-2e { margin-bottom: 2em; }
+
+#mapSpringfield { height: 165px; }
+
+#mapCharleston { height: 240px; }
+
+#mapAtlanta { height: 215px; }

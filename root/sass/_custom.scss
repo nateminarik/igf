@@ -372,10 +372,6 @@ ul.inline-list {
 
 .awesome{background:red;}
 
-.txt-middle {
-  font-size: 1.7em;
-}
-
 .line-small {
   background: $horizontal-rule-color;
   margin: 0px 0 15px;
@@ -387,12 +383,11 @@ ul.inline-list {
   margin-bottom: 1em;
 }
 
-#mapSpringfield {
-  height: 130px;
-}
-#mapCharleston {
-  height: 200px;
-}
-#mapAtlanta {
-  height: 220px;
+.address-box {
+  @include border-radius (5px);
+  border: 1px solid $horizontal-rule-color;
+  background: lighten($horizontal-rule-color, 13%);
+  padding: 1px 10px;
+  color: $info-color;
+  font-size: .9rem;
 }

@@ -91,6 +91,9 @@
 			<div class="eight columns">
 				<div id="output"></div>
 			</div>
+            <div class="four columns">
+                123
+            </div>
 		</div>
 
 	</div><!-- end shadow -->
@@ -221,7 +224,7 @@
 		            var title = $item.find('title').text();
 		            var description = $item.find('description').text();
 		            var address = $item.find('address').text();
-		            var imageurl = $item.find('mainpicture').text();
+		            var imageurl = $item.find('mainpicture').text().trim();
 		            var html = "";
 		            var footerhtml = "";
 		 			
@@ -236,8 +239,8 @@
 		            	footerhtml += '<a href=\"events.html\"><i class=\"icon-doc-text\"></i>News &amp; Events</a></span>';
 		 			}
 		            else {
-
-		            	html = '<h2>' + title + '</h2><img alt="" src="img/news/' + imageurl + '" />';
+                        console.log(imageurl);
+		            	html = '<h2>' + title + '</h2><img alt="" src="img/events/' + imageurl + '" />';
 		            	html +=  description;
 		            	html += '<p>' + address + '</p>';
 		            	footerhtml = '<span id=\"footer-recent\">';

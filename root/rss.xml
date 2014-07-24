@@ -1,29 +1,50 @@
 <?xml version="1.0"?>
 <rss version="2.0">
-  <channel>
-    <title>International Gourmet Foods News &amp; Events</title> 
-    <link>http://igf-inc.com/events.html</link>
-    <description>Get the latest on events we showcase and promotional offers </description>
+    <channel>
+        <title>International Gourmet Foods News &amp; Events</title>
+        <link>http://igf-inc.com/events.html</link>
+        <description>Get the latest on events we showcase and promotional offers </description>
 
-    <item>
-       <title>Product Showcase</title>
-       <mainpicture></mainpicture><!-- the name after location (i.e. "img.jpg") - put all pictures in img/events/ -->
-       <description>
-          <![CDATA[
+        <!--<item>-->
+            <!--<title>Product Showcase</title>-->
+            <!--<mainpicture>_DSC0243.JPG</mainpicture>&lt;!&ndash; the name after location (i.e. "img.jpg") - put all pictures in img/events/ &ndash;&gt;-->
+            <!--<description>-->
+                <!--<![CDATA[-->
+            <!--<p>-->
+               <!--Trade Only Please -->
+            <!--</p>-->
+            <!--<p>-->
+              <!--Monday, July 21, 2014<br/>-->
+              <!--Embassy Suites North Charleston – Airport/Hotel & Convention Center<br />-->
+              <!--Ballroom C-->
+            <!--</p>-->
+          <!--]]>-->
+            <!--</description>-->
+            <!--<address>-->
+                <!--5055 International Boulevard North Charleston, SC 29418-->
+            <!--</address>-->
+        <!--</item>-->
+        <item>
+            <title>Upcoming Product Showcases</title>
+            <mainpicture></mainpicture><!-- the name after location (i.e. "img.jpg") - put all pictures in img/events/ -->
+            <description>
+                <![CDATA[
             <p>
-               Trade Only Please 
+               Trade Only Please
             </p>
             <p>
-              Monday, July 21, 2014<br/>
-              Embassy Suites North Charleston – Airport/Hotel & Convention Center<br />
-              Ballroom C
+                Monday, September 15th, 2014
+                Crowne Plaza – Atlanta Perimeter at Ravinia | Ballroom
+                4355 Ashford-Dunwoody Road, Atlanta, GA 30346
             </p>
           ]]>
-      </description>
-      <address>
-        5055 International Boulevard North Charleston, SC 29418
-      </address>
-    </item>
-      
-  </channel>
+            </description>
+            <address>
+                4355 Ashford-Dunwoody Road, Atlanta, GA 30346
+            </address>
+        </item>
+
+
+
+    </channel>
 </rss>
