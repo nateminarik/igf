@@ -1691,28 +1691,23 @@ table.rounded thead th, table.rounded thead td, table.rounded caption + tbody tr
 @media only screen and (min-width: 600px) { .header-bg { height: 136px; background: url(../img/header-bg.png) repeat-x; } }
 @media only screen and (min-width: 960px) { .header-bg { height: 136px; background: url(../img/header-bg.png) repeat-x; } }
 
-.logo a img { margin-top: 32px; position: absolute; z-index: 9999; width: 80px; }
-@media only screen and (min-width: 400px) { .logo a img { margin-top: 0; position: absolute; width: 130px; } }
-@media only screen and (min-width: 600px) { .logo a img { margin-top: 30px; position: absolute; width: 150px; } }
-@media only screen and (min-width: 768px) { .logo a img { width: 150px; } }
-@media only screen and (min-width: 960px) { .logo a img { margin-top: 0; position: relative; width: 250px; } }
+.logo a img { position: absolute; z-index: 9999; width: 130px; /*@include respond("min-width: 760px") { width:
+}*/ }
+@media only screen and (min-width: 600px) { .logo a img { position: absolute; width: 190px; } }
+@media only screen and (min-width: 960px) { .logo a img { position: relative; width: 250px; } }
 
 @media only screen and (min-width: 600px) { .top-social { position: relative; }
   .top-social li:first-child { margin-top: -70px; padding-right: 36px; }
   .top-social li { margin-top: -70px; margin-right: 0; } }
-@media only screen and (min-width: 768px) { .top-social { position: relative; }
-  .top-social li:first-child { margin-top: 0; padding-right: 36px; }
-  .top-social li { margin-top: 0; margin-right: -0.3em; } }
 @media only screen and (min-width: 960px) { .top-social { position: relative; margin-right: 70px; }
   .top-social li:first-child { margin-top: 0; padding-right: 0; }
   .top-social li { margin-top: 0; margin-right: 0; } }
 
-.top-section { margin-top: -5.5em; margin-left: 24px; float: left; color: #fff; font-size: 1em; font-family: "Vollkorn"; line-height: 1em; }
-@media only screen and (min-width: 400px) { .top-section { margin-top: -5.5em; margin-left: 124px; } }
+.top-section { margin-top: -5.5em; margin-left: 124px; float: left; color: #fff; font-size: 1em; font-family: "Vollkorn"; line-height: 1em; }
 @media only screen and (min-width: 440px) { .top-section { margin-top: -4.7em; margin-left: 130px; font-size: 1.2em; } }
 @media only screen and (min-width: 493px) { .top-section { margin-top: -1.5em; } }
-@media only screen and (min-width: 600px) { .top-section { margin-top: -1.65em; margin-left: 6.3em; font-size: 1.5em; } }
-@media only screen and (min-width: 768px) { .top-section { margin-top: 24px; margin-left: -1em; font-size: 2em; } }
+@media only screen and (min-width: 600px) { .top-section { margin-top: -1.65em; margin-left: 8.5em; font-size: 1.5em; } }
+@media only screen and (min-width: 768px) { .top-section { margin-top: 0.5em; margin-left: 8.7em; margin-left: auto; font-size: 2em; } }
 @media only screen and (min-width: 960px) { .top-section { margin-top: 0.5em; margin-left: auto; font-size: 2.4em; } }
 
 .bottom-section-slogan { display: block; padding-right: 35%; color: #333333; font-size: 2em; font-family: "Rage Italic"; line-height: 2em; /*should be 1 !!!!!*/ }
@@ -1724,8 +1719,8 @@ ul.inline-list li i:hover { color: #e0cc92; }
 .nav-container { margin-top: 37px; }
 .nav-container .navbar { height: 60px; }
 @media only screen and (min-width: 600px) { .nav-container .navbar { height: 60px; margin-top: 69px; } }
-@media only screen and (min-width: 768px) { .nav-container .navbar { height: 60px; margin-top: 70px; margin-left: -44px; } }
-@media only screen and (min-width: 960px) { .nav-container .navbar { height: 60px; margin-top: 70px; margin-left: 0; } }
+@media only screen and (min-width: 768px) { .nav-container .navbar { height: 60px; margin-top: 70px; } }
+@media only screen and (min-width: 960px) { .nav-container .navbar { height: 60px; margin-top: 70px; } }
 .nav-container .navbar ul li a { font-family: "nerislight"; font-size: 1.2em; font-weight: 600; }
 .nav-container .navbar ul li > a:hover { background-color: #e0cc92; }
 
@@ -1735,34 +1730,20 @@ ul.inline-list li i:hover { color: #e0cc92; }
 .content .row h3 { font-size: 1.8em; text-shadow: 1px 1px 2px white, 0px 0px 0px black, 0px 0px 1px white; }
 .content .row h4 { font-size: 2.0em; text-shadow: 1px 1px 2px white, 0px 0px 0px black, 0px 0px 1px white; }
 
-.with-space { margin-top: 100px; position: relative; }
-@media only screen and (min-width: 360px) { .with-space { margin-top: 120px; } }
-@media only screen and (min-width: 400px) { .with-space { margin-top: 140px; } }
-@media only screen and (min-width: 450px) { .with-space { margin-top: 160px; } }
-@media only screen and (min-width: 500px) { .with-space { margin-top: 190px; } }
-@media only screen and (min-width: 550px) { .with-space { margin-top: 210px; } }
-@media only screen and (min-width: 600px) { .with-space { margin-top: 228px; } }
-@media only screen and (min-width: 650px) { .with-space { margin-top: 256px; } }
-@media only screen and (min-width: 720px) { .with-space { margin-top: 272px; } }
-@media only screen and (min-width: 768px) { .with-space { margin-top: 290px; } }
-@media only screen and (min-width: 900px) { .with-space { margin-top: 340px; } }
+.with-space { margin-top: 140px; position: relative; }
+@media only screen and (min-width: 600px) { .with-space { margin-top: 268px; } }
 @media only screen and (min-width: 960px) { .with-space { margin-top: 322px; } }
 
 .spacer { margin: 15px 0; }
 
-.callout { display: -webkit-flex; display: flex; -webkit-flex-direction: column; flex-direction: column; -webkit-align-items: center; align-items: center; -webkit-justify-content: space-around; justify-content: space-around; height: 4em; }
-.callout .callout-para { max-width: 100%; }
-.callout .callout-para p { margin-top: 0.4em; font-size: 1em; }
-@media only screen and (min-width: 400px) { .callout .callout-para p { margin-top: 0; } }
-.callout .callout-btn { max-width: 100%; }
-@media only screen and (min-width: 768px) { .callout { display: -webkit-flex; display: flex; -webkit-flex-direction: row; flex-direction: row; -webkit-align-items: center; align-items: center; -webkit-justify-content: space-around; justify-content: space-around; height: 4em; }
-  .callout .callout-para { max-width: 60%; }
-  .callout .callout-para p { margin-top: 0.4em; font-size: 1.7em; }
-  .callout .callout-btn { max-width: 40%; } }
+.cta h3 { padding-left: 1em; }
+
+.cta-button { margin-top: 0.4em; position: relative; }
+@media only screen and (max-width: 768px) { .cta-button { margin-top: -2.6em; } }
 
 .fullwidthbanner-container { margin-top: -16px; position: absolute; }
 @media only screen and (min-width: 600px) { .fullwidthbanner-container { margin-top: -16px; } }
-@media only screen and (min-width: 960px) { .fullwidthbanner-container { margin-top: -79px; } }
+@media only screen and (min-width: 960px) { .fullwidthbanner-container { margin-top: -78px; } }
 
 /*-------- footer -----------*/
 .footer { padding: 1.5em 0 1.2em; width: 100%; background: #3f6633; border-top: #b6922a 4px solid; color: #fff; font-family: "nerislight"; }
@@ -1778,7 +1759,7 @@ ul.inline-list li i:hover { color: #e0cc92; }
 .footer a i { margin-right: 0.1em; }
 .footer a:hover { color: #e0cc92; }
 .footer hr { margin-top: 0; border: 0; height: 1px; background-image: -webkit-linear-gradient(left, rgba(224, 204, 146, 0), rgba(224, 204, 146, 0.75), rgba(224, 204, 146, 0)); background-image: -moz-linear-gradient(left, rgba(224, 204, 146, 0), rgba(224, 204, 146, 0.75), rgba(224, 204, 146, 0)); background-image: -ms-linear-gradient(left, rgba(224, 204, 146, 0), rgba(224, 204, 146, 0.75), rgba(224, 204, 146, 0)); background-image: -o-linear-gradient(left, rgba(224, 204, 146, 0), rgba(224, 204, 146, 0.75), rgba(224, 204, 146, 0)); }
-.footer h4 { margin-bottom: -0.3em; font-family: "Rage Italic"; color: #e0cc92; font-size: 1.8em; }
+.footer h4 { margin-bottom: -0.3em; font-family: "Rage Italic"; color: #e0cc92; font-size: 1.8em; width: 100%; display: inline-block; }
 .footer h5.comp-name { margin: 0 auto; font-size: 1.25em; font-family: "Vollkorn"; color: #fff; }
 .footer address { font-family: "nerislight"; margin: -0.4em 0 0.1em; }
 .footer ul li a { font-family: "nerislight"; color: #fff; }

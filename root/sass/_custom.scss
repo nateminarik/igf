@@ -1,371 +1,373 @@
 /*---------header ---------*/
 .header-bg {
-	margin-top: 0;
-	width: 100%;
-	height: 102px;
-	position: absolute;
-	background: url(../img/header-bg-mobile.png) repeat-x;
-	z-index: -1;
-	@include respond("min-width: 600px") {
-		height: 136px;
-		background: url(../img/header-bg.png) repeat-x;
-	}
-	@include respond("min-width: 960px") {
-		height: 136px;
-		background: url(../img/header-bg.png) repeat-x;
-	} 
+  margin-top: 0;
+  width: 100%;
+  height: 102px;
+  position: absolute;
+  background: url(../img/header-bg-mobile.png) repeat-x;
+  z-index: -1;
+  @include respond("min-width: 600px") {
+    height: 136px;
+    background: url(../img/header-bg.png) repeat-x;
+  }
+  @include respond("min-width: 960px") {
+    height: 136px;
+    background: url(../img/header-bg.png) repeat-x;
+  }
 }
 
 .logo {
-	a img {
-		position: absolute;
-		z-index: 9999;
-		width: 130px;
-  		@include respond("min-width: 600px") {
-			position: absolute;
-    		width: 190px;
-  		}
-  		/*@include respond("min-width: 760px") {
-  			width: 
-  		}*/
-  		@include respond("min-width: 960px") {
-  			position: relative;
-  			width: 250px;
-  		}
-	}
+  a img {
+    position: absolute;
+    z-index: 9999;
+    width: 130px;
+    @include respond("min-width: 600px") {
+      position: absolute;
+      width: 190px;
+    }
+    /*@include respond("min-width: 760px") {
+        width:
+    }*/
+    @include respond("min-width: 960px") {
+      position: relative;
+      width: 250px;
+    }
+  }
 }
 
 .top-social{
-	@include respond("min-width: 600px") {
-		position: relative;
-		li:first-child {
-			margin-top: -70px;
-			padding-right: 36px;
-		}
-		li {
-			margin-top: -70px;
-			margin-right: 0;
-		}
-	}
-	@include respond("min-width: 960px") {
-		position: relative;
-		margin-right: 70px;
-		li:first-child {
-			margin-top: 0;
-			padding-right: 0;
-		}
-		li {
-			margin-top: 0;
-			margin-right: 0;
-		}
-	}
+  @include respond("min-width: 600px") {
+    position: relative;
+    li:first-child {
+      margin-top: -70px;
+      padding-right: 36px;
+    }
+    li {
+      margin-top: -70px;
+      margin-right: 0;
+    }
+  }
+  @include respond("min-width: 960px") {
+    position: relative;
+    margin-right: 70px;
+    li:first-child {
+      margin-top: 0;
+      padding-right: 0;
+    }
+    li {
+      margin-top: 0;
+      margin-right: 0;
+    }
+  }
 }
 
 .top-section {
-	margin-top: -5.5em;
-	margin-left: 124px;
-	float: left;
-	color: #fff;
-	font-size: 1em;
-	font-family: $heading-font;
-	line-height: 1em;
-	@include respond("min-width: 440px") {
-		margin-top: -4.7em;
-		margin-left: 130px;
-		font-size: 1.2em;
-	}
-	@include respond("min-width: 493px") {
-		margin-top: -1.5em;
-	}
-	@include respond("min-width: 600px") {
-		margin-top: -1.65em;
-		margin-left: 8.5em;
-		font-size: 1.5em;
-	}
-	@include respond("min-width: 768px") {
-		margin-top: 0.5em;
-		margin-left: 8.7em;
-		margin-left: auto;
-		font-size: 2em;
-	}
-	@include respond("min-width: 960px") {
-		margin-top: 0.5em;
-		margin-left: auto;
-		font-size: 2.4em;
-	}
+  margin-top: -5.5em;
+  margin-left: 124px;
+  float: left;
+  color: #fff;
+  font-size: 1em;
+  font-family: $heading-font;
+  line-height: 1em;
+  @include respond("min-width: 440px") {
+    margin-top: -4.7em;
+    margin-left: 130px;
+    font-size: 1.2em;
+  }
+  @include respond("min-width: 493px") {
+    margin-top: -1.5em;
+  }
+  @include respond("min-width: 600px") {
+    margin-top: -1.65em;
+    margin-left: 8.5em;
+    font-size: 1.5em;
+  }
+  @include respond("min-width: 768px") {
+    margin-top: 0.5em;
+    margin-left: 8.7em;
+    margin-left: auto;
+    font-size: 2em;
+  }
+  @include respond("min-width: 960px") {
+    margin-top: 0.5em;
+    margin-left: auto;
+    font-size: 2.4em;
+  }
 }
 
 .bottom-section-slogan{
-	display: block;
-	padding-right: 35%;
-	color: $body-font-color;
-	font-size: 2em;
-	font-family: $tagline;
-	line-height: 2em;/*should be 1 !!!!!*/
+  display: block;
+  padding-right: 35%;
+  color: $body-font-color;
+  font-size: 2em;
+  font-family: $tagline;
+  line-height: 2em;/*should be 1 !!!!!*/
 }
 
 ul.inline-list {
-	li{
-		display: inline;
-		float: right;
+  li{
+    display: inline;
+    float: right;
 
-		i {
-			margin-top: 1.1em;
-			font-size: 1.6em;
-			color: #fff;
-		}
-		i:hover {
-			color: #e0cc92;
-		}
-	}
+    i {
+      margin-top: 1.1em;
+      font-size: 1.6em;
+      color: #fff;
+    }
+    i:hover {
+      color: #e0cc92;
+    }
+  }
 
 }
 
 .nav-container {
-	margin-top: 37px;
-	.navbar {
-		height: 60px;
-		@include respond("min-width: 600px") {
-			height: 60px;
-			margin-top: 69px;
-		}
-		@include respond("min-width: 768px") {
-			height: 60px;
-			margin-top: 70px;
-		}
-		@include respond("min-width: 960px") {
-			height: 60px;
-			margin-top: 70px;
-		}
-	}
-	.navbar ul li a{
-		font-family: $footer-text;
-		font-size: 1.2em;
-		font-weight: 600;
-	}
-	.navbar ul li > a:hover{
-		background-color: #e0cc92;
-	}
+  margin-top: 37px;
+  .navbar {
+    height: 60px;
+    @include respond("min-width: 600px") {
+      height: 60px;
+      margin-top: 69px;
+    }
+    @include respond("min-width: 768px") {
+      height: 60px;
+      margin-top: 70px;
+    }
+    @include respond("min-width: 960px") {
+      height: 60px;
+      margin-top: 70px;
+    }
+  }
+  .navbar ul li a{
+    font-family: $footer-text;
+    font-size: 1.2em;
+    font-weight: 600;
+  }
+  .navbar ul li > a:hover{
+    background-color: #e0cc92;
+  }
 }
 
 /*---------- content -----------*/
 .content {
-	margin-top: -78px;
-	background: url(../img/subtler-stripes.png) #fff repeat;
-	.row{
-		padding-top: 1.5em;
-		z-index: 2;
-		h3{
-			font-size: 1.8em;
-			@include text-shadow(
-				1px 1px 2px lighten(#dddddd, 45%),
-				0px 0px 0px darken(#dddddd, 100%),
-				0px 0px 1px lighten(#dddddd, 80%)
-			);
-		}
-		h4{
-			font-size: 2.0em;
-			@include text-shadow(
-				1px 1px 2px lighten(#dddddd, 45%),
-				0px 0px 0px darken(#dddddd, 100%),
-				0px 0px 1px lighten(#dddddd, 80%)
-			);
-		}
-	}
+  margin-top: -78px;
+  background: url(../img/subtler-stripes.png) #fff repeat;
+  .row{
+    padding-top: 1.5em;
+    z-index: 2;
+    h3{
+      font-size: 1.8em;
+      @include text-shadow(
+              1px 1px 2px lighten(#dddddd, 45%),
+              0px 0px 0px darken(#dddddd, 100%),
+              0px 0px 1px lighten(#dddddd, 80%)
+      );
+    }
+    h4{
+      font-size: 2.0em;
+      @include text-shadow(
+              1px 1px 2px lighten(#dddddd, 45%),
+              0px 0px 0px darken(#dddddd, 100%),
+              0px 0px 1px lighten(#dddddd, 80%)
+      );
+    }
+  }
 }
 
 .with-space {
-	margin-top: 140px;
-	position: relative;
-	@include respond("min-width: 600px") {
-		margin-top: 268px;
-	}
-	@include respond("min-width: 960px") {
-		margin-top: 322px;
-	}
+  margin-top: 140px;
+  position: relative;
+  @include respond("min-width: 600px") {
+    margin-top: 268px;
+  }
+  @include respond("min-width: 960px") {
+    margin-top: 322px;
+  }
 }
 
 .spacer {
-	margin: 15px 0;
+  margin: 15px 0;
 }
 
 .cta h3{
-	padding-left: 1em;
+  padding-left: 1em;
 }
 
 .cta-button{
-	margin-top: 0.4em;
-	position: relative;
-	@include respond(portrait-tablets) {
-		margin-top: -2.6em;
-	}
+  margin-top: 0.4em;
+  position: relative;
+  @include respond(portrait-tablets) {
+    margin-top: -2.6em;
+  }
 }
 
 .fullwidthbanner-container {
-	margin-top: -16px;
-	position: absolute;
-	@include respond("min-width: 600px") {
-    	margin-top: -16px;
+  margin-top: -16px;
+  position: absolute;
+  @include respond("min-width: 600px") {
+    margin-top: -16px;
 
-	}
-	@include respond("min-width: 960px") {
-		margin-top: -78px;
-	}
+  }
+  @include respond("min-width: 960px") {
+    margin-top: -78px;
+  }
 }
 
 /*-------- footer -----------*/
 .footer {
-	padding: 1.5em 0 1.2em;
-	width: 100%;
-	background: #3f6633;
-	border-top: #b6922a 4px solid;
-	color: #fff;
-	font-family: $footer-text;
-	#footer-recent {
-		width: 100%;
-		display: block;
-		margin-bottom: 1em;
-		span.title{
-			margin: 0 auto;
-			font-size: 1.2em;
-			font-family: $footer-text;
-			display: block;
-			text-align: left;
-			text-decoration: underline;
-		}
-		p {
-			margin: 0 auto;
-			color: #fff;
-			float: left;
-			display: block;
-			text-align: justify;
-			font-family: $footer-text;
-			line-height: 1.3em;
-			img {
-				padding: 0.1em 0.7em 0.1em 0;
-				max-width: 43%;
-				float: left;
-			}
-			a {
-				display: inline;
-				padding: 0 0.3em;
-				margin: auto 0;
-				float: none;
-				font-size: 1em;
-				text-decoration: underline;
+  padding: 1.5em 0 1.2em;
+  width: 100%;
+  background: #3f6633;
+  border-top: #b6922a 4px solid;
+  color: #fff;
+  font-family: $footer-text;
+  #footer-recent {
+    width: 100%;
+    display: block;
+    margin-bottom: 1em;
+    span.title{
+      margin: 0 auto;
+      font-size: 1.2em;
+      font-family: $footer-text;
+      display: block;
+      text-align: left;
+      text-decoration: underline;
+    }
+    p {
+      margin: 0 auto;
+      color: #fff;
+      float: left;
+      display: block;
+      text-align: justify;
+      font-family: $footer-text;
+      line-height: 1.3em;
+      img {
+        padding: 0.1em 0.7em 0.1em 0;
+        max-width: 43%;
+        float: left;
+      }
+      a {
+        display: inline;
+        padding: 0 0.3em;
+        margin: auto 0;
+        float: none;
+        font-size: 1em;
+        text-decoration: underline;
 
-			}
-		}
-		a {
-			margin: 0.8em auto 0;
-			padding-right: 1.3em;
-			float: left;
-			display: inline;
-			position: relative;
-			text-align: center;
-			font-size: 0.9em;
-		}
-	}
-	.social-icons{
-		margin-left: -1em;
-		a i{
-			margin-top: 0.3em;
-			font-size: 1.4em;
-		}
-	}
-	a {
-		color: #fff;
-		i {
-			margin-right: 0.1em;
-		}
-	}
-	a:hover {
-		color: #e0cc92;
-	}
-	hr {
-		margin-top: 0;
-		border: 0;
-	    height: 1px;
-	    background-image: -webkit-linear-gradient(left, rgba(224,204,146,0), rgba(224,204,146,0.75), rgba(224,204,146,0)); 
-	    background-image:    -moz-linear-gradient(left, rgba(224,204,146,0), rgba(224,204,146,0.75), rgba(224,204,146,0)); 
-	    background-image:     -ms-linear-gradient(left, rgba(224,204,146,0), rgba(224,204,146,0.75), rgba(224,204,146,0)); 
-	    background-image:      -o-linear-gradient(left, rgba(224,204,146,0), rgba(224,204,146,0.75), rgba(224,204,146,0)); 
-	}
-	h4 {
-		margin-bottom: -0.3em;
-		font-family: $tagline;
-		color: #e0cc92;
-		font-size: 1.8em;
-	}
-	h5.comp-name{
-		margin: 0 auto;
-		font-size: 1.25em;
-		font-family: $heading-font;
-		color: #fff;
-	}
-	address {
-		font-family: $footer-text;
-		margin: -0.4em 0 0.1em;
-	}
-	ul li a {
-		font-family: $footer-text;
-		color: #fff;
-	}
-	ul li a:hover {
-		color: #e0cc92;
-	}
-	.comp-info {
-		a {
-			font-size: 0.9em;
-		}
-		a.news-signup {
-			margin: 1.6em auto 1.6em;
-			padding: 2px 0;
-			display: block;
-			background: #224422;
-			border: #e0cc92 1px solid;
-			@include border-radius(5px, 5px);
-			text-align: center;
-			color: #eee;
-			font-family: $headline-font;
-			font-size: 0.9em;
-		}
-		a.news-signup:hover {
-			background: #335533;
-			border: #fff 1px solid;
-			color: #e0cc92;
-		}
-	}
+      }
+    }
+    a {
+      margin: 0.8em auto 0;
+      padding-right: 1.3em;
+      float: left;
+      display: inline;
+      position: relative;
+      text-align: center;
+      font-size: 0.9em;
+    }
+  }
+  .social-icons{
+    margin-left: -1em;
+    a i{
+      margin-top: 0.3em;
+      font-size: 1.4em;
+    }
+  }
+  a {
+    color: #fff;
+    i {
+      margin-right: 0.1em;
+    }
+  }
+  a:hover {
+    color: #e0cc92;
+  }
+  hr {
+    margin-top: 0;
+    border: 0;
+    height: 1px;
+    background-image: -webkit-linear-gradient(left, rgba(224,204,146,0), rgba(224,204,146,0.75), rgba(224,204,146,0));
+    background-image:    -moz-linear-gradient(left, rgba(224,204,146,0), rgba(224,204,146,0.75), rgba(224,204,146,0));
+    background-image:     -ms-linear-gradient(left, rgba(224,204,146,0), rgba(224,204,146,0.75), rgba(224,204,146,0));
+    background-image:      -o-linear-gradient(left, rgba(224,204,146,0), rgba(224,204,146,0.75), rgba(224,204,146,0));
+  }
+  h4 {
+    margin-bottom: -0.3em;
+    font-family: $tagline;
+    color: #e0cc92;
+    font-size: 1.8em;
+    width: 100%;
+    display: inline-block;
+  }
+  h5.comp-name{
+    margin: 0 auto;
+    font-size: 1.25em;
+    font-family: $heading-font;
+    color: #fff;
+  }
+  address {
+    font-family: $footer-text;
+    margin: -0.4em 0 0.1em;
+  }
+  ul li a {
+    font-family: $footer-text;
+    color: #fff;
+  }
+  ul li a:hover {
+    color: #e0cc92;
+  }
+  .comp-info {
+    a {
+      font-size: 0.9em;
+    }
+    a.news-signup {
+      margin: 1.6em auto 1.6em;
+      padding: 2px 0;
+      display: block;
+      background: #224422;
+      border: #e0cc92 1px solid;
+      @include border-radius(5px, 5px);
+      text-align: center;
+      color: #eee;
+      font-family: $headline-font;
+      font-size: 0.9em;
+    }
+    a.news-signup:hover {
+      background: #335533;
+      border: #fff 1px solid;
+      color: #e0cc92;
+    }
+  }
 }/* end footer */
 
 .sub-footer {
-	border-top: #aaa 1px solid;
-	font-size: 0.8em;
-	background: #112211;
-	color: #aaa;
-	a.credit {
-		color: #ddd;
-	}
-	a:hover {
-		color: #ffa500;
-	}
-	.social-icons {
-		a {
-			font-size: 1.4em;
-			color: #aaa
-		}
-		a:hover {
-			color: #ddd;
-		}
-	}
+  border-top: #aaa 1px solid;
+  font-size: 0.8em;
+  background: #112211;
+  color: #aaa;
+  a.credit {
+    color: #ddd;
+  }
+  a:hover {
+    color: #ffa500;
+  }
+  .social-icons {
+    a {
+      font-size: 1.4em;
+      color: #aaa
+    }
+    a:hover {
+      color: #ddd;
+    }
+  }
 }
 
 /* ------- utility classes -------*/
 .right {
-	float: right;
+  float: right;
 }
 .left {
-	float: left;
+  float: left;
 }
 
 .awesome{background:red;}
