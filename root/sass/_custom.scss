@@ -286,10 +286,7 @@ ul.inline-list {
     margin-top: 0;
     border: 0;
     height: 1px;
-    background-image: -webkit-linear-gradient(left, rgba(224,204,146,0), rgba(224,204,146,0.75), rgba(224,204,146,0));
-    background-image:    -moz-linear-gradient(left, rgba(224,204,146,0), rgba(224,204,146,0.75), rgba(224,204,146,0));
-    background-image:     -ms-linear-gradient(left, rgba(224,204,146,0), rgba(224,204,146,0.75), rgba(224,204,146,0));
-    background-image:      -o-linear-gradient(left, rgba(224,204,146,0), rgba(224,204,146,0.75), rgba(224,204,146,0));
+    @include background-image(linear-gradient(left, rgba(224,204,146,0), rgba(224,204,146,0.75), rgba(224,204,146,0)));
   }
   h4 {
     margin-bottom: -0.3em;
@@ -371,3 +368,13 @@ ul.inline-list {
 }
 
 .awesome{background:red;}
+
+.txt-middle {
+  font-size: 1.7em;
+}
+.line-small {
+  background: $horizontal-rule-color;
+  margin: 0px 0 15px;
+  border: none;
+  height: 1px;
+}

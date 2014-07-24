@@ -36,4 +36,8 @@
 @import "../bower_components/gumby/sass/ui/all";
 @import "../bower_components/gumby/sass/shame";
 
+@import "animation";
+@import "animation/animate";
+@import "animation/animate/classes";
+
 @import "custom";
