@@ -2995,8 +2995,12 @@ ul.inline-list li i:hover { color: #e0cc92; }
 
 .left { float: left; }
 
+.italic { font-style: italic; }
+
 .awesome { background: red; }
 
 .txt-middle { font-size: 1.7em; }
 
 .line-small { background: #cccccc; margin: 0px 0 15px; border: none; height: 1px; }
+
+.services-list { margin-bottom: 1em; }

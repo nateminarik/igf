@@ -366,15 +366,23 @@ ul.inline-list {
 .left {
   float: left;
 }
+.italic {
+  font-style: italic;
+}
 
 .awesome{background:red;}
 
 .txt-middle {
   font-size: 1.7em;
 }
+
 .line-small {
   background: $horizontal-rule-color;
   margin: 0px 0 15px;
   border: none;
   height: 1px;
+}
+
+.services-list {
+  margin-bottom: 1em;
 }
