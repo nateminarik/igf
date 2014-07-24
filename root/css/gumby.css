@@ -1715,9 +1715,7 @@ table.rounded thead th, table.rounded thead td, table.rounded caption + tbody tr
 @media only screen and (min-width: 768px) { .top-section { margin-top: 24px; margin-left: -1em; font-size: 2em; } }
 @media only screen and (min-width: 960px) { .top-section { margin-top: 0.5em; margin-left: auto; font-size: 2.4em; } }
 
-.bottom-section-slogan { display: block; margin-top: 0; padding-right: 0; padding-bottom: 3em; color: #333333; font-size: 1.2em; font-family: "Rage Italic"; line-height: 1.2em; }
-@media only screen and (min-width: 768px) { .bottom-section-slogan { padding-right: 33%; font-size: 2em; line-height: 2em; } }
-@media only screen and (min-width: 960px) { .bottom-section-slogan { padding-right: 35%; } }
+.bottom-section-slogan { display: block; padding-right: 35%; color: #333333; font-size: 2em; font-family: "Rage Italic"; line-height: 2em; /*should be 1 !!!!!*/ }
 
 ul.inline-list li { display: inline; float: right; }
 ul.inline-list li i { margin-top: 1.1em; font-size: 1.6em; color: #fff; }
@@ -1759,7 +1757,7 @@ ul.inline-list li i:hover { color: #e0cc92; }
 .callout .callout-btn { max-width: 100%; }
 @media only screen and (min-width: 768px) { .callout { display: -webkit-flex; display: flex; -webkit-flex-direction: row; flex-direction: row; -webkit-align-items: center; align-items: center; -webkit-justify-content: space-around; justify-content: space-around; height: 4em; }
   .callout .callout-para { max-width: 60%; }
-  .callout .callout-para p { margin-top: 0.5em; font-size: 1.7em; }
+  .callout .callout-para p { margin-top: 0.4em; font-size: 1.7em; }
   .callout .callout-btn { max-width: 40%; } }
 
 .fullwidthbanner-container { margin-top: -16px; position: absolute; }
