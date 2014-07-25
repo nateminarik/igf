@@ -474,3 +474,50 @@ ul.inline-list {
   color: $info-color;
   font-size: .9rem;
 }
+
+#output {
+  padding-bottom: 2em;
+
+  .address-box {
+    margin-bottom: 2em;
+  }
+}
+
+.events_gallery {
+
+  li {
+    display: inline-block;
+    float: left;
+    margin-right:  0.273em;
+
+    &:hover {
+      z-index: 2;
+
+      img {
+        @include scale(1.1);
+        @include box-shadow(#4e4e4e 0 1px 3px);
+        @include transition(.1s);
+        border: 1px solid #ffffff
+      }
+    }
+
+    a {
+      display: inline-block;
+      float: left;
+
+      img {
+        float: left;
+      }
+    }
+  }
+}
+
+.gallery-wrp {
+  padding-right: 10px;
+  position: relative;
+  overflow: hidden;
+
+  .ps-scrollbar-x-rail {
+    display: none !important;
+  }
+}
