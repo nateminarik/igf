@@ -13,25 +13,33 @@
   @include respond("min-width: 960px") {
     height: 136px;
     background: url(../img/header-bg.png) repeat-x;
-  }
+  } 
 }
 
 .logo {
   a img {
+    margin-top: 32px;
     position: absolute;
     z-index: 9999;
-    width: 130px;
-    @include respond("min-width: 600px") {
+    width: 80px;
+    @include respond("min-width: 400px") {
+      margin-top: 0;
       position: absolute;
-      width: 190px;
+      width: 130px;
     }
-    /*@include respond("min-width: 760px") {
-        width:
-    }*/
-    @include respond("min-width: 960px") {
-      position: relative;
-      width: 250px;
-    }
+      @include respond("min-width: 600px") {
+        margin-top: 30px;
+      position: absolute;
+        width: 150px;
+      }
+      @include respond("min-width: 768px") {
+        width: 150px;
+      }
+      @include respond("min-width: 960px") {
+        margin-top: 0;
+        position: relative;
+        width: 250px;
+      }
   }
 }
 
@@ -45,6 +53,17 @@
     li {
       margin-top: -70px;
       margin-right: 0;
+    }
+  }
+  @include respond("min-width: 768px") {
+    position: relative;
+    li:first-child {
+      margin-top: 0;
+      padding-right: 36px;
+    }
+    li {
+      margin-top: 0;
+      margin-right: -0.3em;
     }
   }
   @include respond("min-width: 960px") {
@@ -63,12 +82,16 @@
 
 .top-section {
   margin-top: -5.5em;
-  margin-left: 124px;
+  margin-left: 24px;
   float: left;
   color: #fff;
   font-size: 1em;
   font-family: $heading-font;
   line-height: 1em;
+  @include respond("min-width: 400px") {
+    margin-top: -5.5em;
+    margin-left: 124px;
+  }
   @include respond("min-width: 440px") {
     margin-top: -4.7em;
     margin-left: 130px;
@@ -79,13 +102,12 @@
   }
   @include respond("min-width: 600px") {
     margin-top: -1.65em;
-    margin-left: 8.5em;
+    margin-left: 6.3em;
     font-size: 1.5em;
   }
   @include respond("min-width: 768px") {
-    margin-top: 0.5em;
-    margin-left: 8.7em;
-    margin-left: auto;
+    margin-top: 24px;
+    margin-left: -1em;
     font-size: 2em;
   }
   @include respond("min-width: 960px") {
@@ -94,6 +116,7 @@
     font-size: 2.4em;
   }
 }
+
 
 .bottom-section-slogan{
   display: block;
@@ -132,10 +155,12 @@ ul.inline-list {
     @include respond("min-width: 768px") {
       height: 60px;
       margin-top: 70px;
+      margin-left: -44px;
     }
     @include respond("min-width: 960px") {
       height: 60px;
       margin-top: 70px;
+      margin-left: 0;
     }
   }
   .navbar ul li a{
@@ -175,10 +200,37 @@ ul.inline-list {
 }
 
 .with-space {
-  margin-top: 140px;
+  margin-top: 100px;
   position: relative;
+  @include respond("min-width: 360px") {
+    margin-top: 120px;
+  }
+  @include respond("min-width: 400px") {
+    margin-top: 140px;
+  }
+  @include respond("min-width: 450px") {
+    margin-top: 160px;
+  }
+  @include respond("min-width: 500px") {
+    margin-top: 190px;
+  }
+  @include respond("min-width: 550px") {
+    margin-top: 210px;
+  }
   @include respond("min-width: 600px") {
-    margin-top: 268px;
+    margin-top: 228px;
+  }
+  @include respond("min-width: 650px") {
+    margin-top: 256px;
+  }
+  @include respond("min-width: 720px") {
+    margin-top: 272px;
+  }
+  @include respond("min-width: 768px") {
+    margin-top: 290px;
+  }
+  @include respond("min-width: 900px") {
+    margin-top: 340px;
   }
   @include respond("min-width: 960px") {
     margin-top: 322px;
@@ -189,15 +241,49 @@ ul.inline-list {
   margin: 15px 0;
 }
 
-.cta h3{
-  padding-left: 1em;
-}
-
-.cta-button{
-  margin-top: 0.4em;
-  position: relative;
-  @include respond(portrait-tablets) {
-    margin-top: -2.6em;
+.callout{
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: center;
+  align-items: center;
+  -webkit-justify-content: space-around;
+  justify-content: space-around;
+  height: 4em;
+  .callout-para {
+    max-width: 100%;
+    p{
+      margin-top: 0.4em;
+      font-size: 1em;
+      @include respond("min-width: 400px") {
+        margin-top: 0;
+      }
+    }
+  }
+  .callout-btn {
+    max-width: 100%;
+  }
+  @include respond("min-width: 768px") {
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-direction: row;
+    flex-direction: row;
+    -webkit-align-items: center;
+    align-items: center;
+    -webkit-justify-content: space-around;
+    justify-content: space-around;
+    height: 4em;
+    .callout-para {
+      max-width: 60%;
+      p{
+        margin-top: 0.5em;
+        font-size: 1.7em;
+      }
+    }
+    .callout-btn {
+      max-width: 40%;
+    }
   }
 }
 
@@ -205,11 +291,10 @@ ul.inline-list {
   margin-top: -16px;
   position: absolute;
   @include respond("min-width: 600px") {
-    margin-top: -16px;
-
+      margin-top: -16px;
   }
   @include respond("min-width: 960px") {
-    margin-top: -78px;
+    margin-top: -79px;
   }
 }
 
@@ -369,8 +454,6 @@ ul.inline-list {
 .italic {
   font-style: italic;
 }
-
-.awesome{background:red;}
 
 .line-small {
   background: $horizontal-rule-color;
