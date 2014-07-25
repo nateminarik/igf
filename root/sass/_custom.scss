@@ -474,3 +474,30 @@ ul.inline-list {
   color: $info-color;
   font-size: .9rem;
 }
+
+#output {
+  padding-bottom: 2em;
+
+  .address-box {
+    margin-bottom: 2em;
+  }
+}
+
+.events_gallery {
+  margin-top: 2em;
+
+  li {
+    display: inline-block;
+    float: left;
+    margin-left:  0.273em;
+
+    a {
+      display: inline-block;
+      float: left;
+
+      img {
+        float: left;
+      }
+    }
+  }
+}

@@ -9,6 +9,7 @@ $(function () {
 });
 
 $(function () {
+    if ($('#services').length) {
     var mapSpringfield = new GMaps({
             el: '#mapSpringfield',
             lat: 38.743830,
@@ -49,4 +50,10 @@ $(function () {
             content: '5550 Fulton Industrial Blvd SW,<br>Atlanta, GA 30336, <br><strong>+1 404-349-6333</strong>'
         }
     });
+    }
+});
+
+$(function () {
+    console.log('15');
+    $("a[rel^='prettyPhoto']").prettyPhoto();
 });

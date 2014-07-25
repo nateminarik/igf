@@ -26,7 +26,7 @@
         </item>
         <item>
             <title>Upcoming Product Showcases</title>
-            <mainpicture></mainpicture><!-- the name after location (i.e. "img.jpg") - put all pictures in img/events/ -->
+            <mainpicture></mainpicture>
             <description>
                 <![CDATA[
             <p>
@@ -44,8 +44,8 @@
             </address>
         </item>
         <item>
-            <title>Springfield</title>
-            <mainpicture></mainpicture><!-- the name after location (i.e. "img.jpg") - put all pictures in img/events/ -->
+            <title>Test upcoming event</title>
+            <mainpicture></mainpicture>
             <description>
                 <![CDATA[
             <p>
@@ -63,8 +63,5 @@
                 Springfield, VA 22153
             </address>
         </item>
-
-
-
     </channel>
 </rss>
