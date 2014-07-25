@@ -484,12 +484,22 @@ ul.inline-list {
 }
 
 .events_gallery {
-  margin-top: 2em;
 
   li {
     display: inline-block;
     float: left;
-    margin-left:  0.273em;
+    margin-right:  0.273em;
+
+    &:hover {
+      z-index: 2;
+
+      img {
+        @include scale(1.1);
+        @include box-shadow(#4e4e4e 0 1px 3px);
+        @include transition(.1s);
+        border: 1px solid #ffffff
+      }
+    }
 
     a {
       display: inline-block;
@@ -499,5 +509,15 @@ ul.inline-list {
         float: left;
       }
     }
+  }
+}
+
+.gallery-wrp {
+  padding-right: 10px;
+  position: relative;
+  overflow: hidden;
+
+  .ps-scrollbar-x-rail {
+    display: none !important;
   }
 }
