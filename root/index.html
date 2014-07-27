@@ -589,7 +589,7 @@
 		      	var footernews = document.getElementById("footeroutput");
 		        $.get('rss.xml', function(d){
 		 
-		        $(d).find('item').each(function(){
+		        $(d).find('item').first().each(function(){
 		 
 		            var $item = $(this); 
 		            var title = $item.find('title').text();
@@ -613,7 +613,7 @@
 		            	footerhtml = '<span id=\"footer-recent\">';
 		            	footerhtml += '<span class=\"title\">' + title + '</span>';
 		            	footerhtml +=  description.substring(0, 60);
-		            	footerhtml +=  '<img alt="" src="img/news/' + imageurl + '" />';
+		            	footerhtml +=  '<img alt="" src="img/events/' + imageurl + '" />';
 		            	footerhtml += description.substring(60, 260);
 		            	footerhtml += '... <a href=\"events.html\">More</a></p>';
 		            	footerhtml += '<a href=\"events.html\"><i class=\"icon-doc-text\"></i>News &amp; Events</a></span>';
