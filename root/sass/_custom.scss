@@ -573,11 +573,12 @@ ul.inline-list {
 }
 
 .products-list {
+  margin: 0 0 2em;
 
   li {
     font-size: .8rem;
     padding: 0 0 0 10px;
-    line-height: 1.56rem;
+    line-height: 1.6rem;
     cursor: pointer;
 
     i {

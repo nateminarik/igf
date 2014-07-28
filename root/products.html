@@ -98,15 +98,15 @@
                                 <img data-index="4" class="product-preview" src="img/products/bread-tortillas-wraps.jpg">
                                 <img data-index="5" class="product-preview" src="img/products/candy-sweets-dessert.jpg">
                                 <img data-index="6" class="product-preview" src="img/products/cheese-plates-accomaniments.jpg">
-                                <img data-index="7" class="product-preview" src="img/products/cheese.jpg">
-                                <img data-index="8" class="product-preview" src="img/products/chips-crackers-snacks.jpg">
-                                <img data-index="9" class="product-preview" src="img/products/condiments-sauces.jpg">
-                                <img data-index="10" class="product-preview" src="img/products/dairy-products.jpg">
-                                <img data-index="11" class="product-preview" src="img/products/flower-grains.jpg">
-                                <img data-index="12" class="product-preview" src="img/products/fruit-puree-preserves.jpg">
-                                <img data-index="13" class="product-preview" src="img/products/honey-syrup.jpg">
-                                <img data-index="14" class="product-preview" src="img/products/hors-doeuvres.jpg">
-                                <img data-index="15" class="product-preview" src="img/products/meats-center-plate.jpg">
+                                <img data-index="7" class="product-preview" src="img/products/chips-crackers-snacks.jpg">
+                                <img data-index="8" class="product-preview" src="img/products/condiments-sauces.jpg">
+                                <img data-index="9" class="product-preview" src="img/products/dairy-products.jpg">
+                                <img data-index="10" class="product-preview" src="img/products/flower-grains.jpg">
+                                <img data-index="11" class="product-preview" src="img/products/fruit-puree-preserves.jpg">
+                                <img data-index="12" class="product-preview" src="img/products/honey-syrup.jpg">
+                                <img data-index="13" class="product-preview" src="img/products/hors-doeuvres.jpg">
+                                <img data-index="14" class="product-preview" src="img/products/meats-center-plate.jpg">
+                                <img data-index="15" class="product-preview" src="img/products/mushrooms-truffles.jpg">
                                 <img data-index="16" class="product-preview" src="img/products/mushrooms-truffles.jpg">
                                 <img data-index="17" class="product-preview" src="img/products/nuts-seeds.jpg">
                                 <img data-index="18" class="product-preview" src="img/products/oil-shortening.jpg">
@@ -129,7 +129,7 @@
                             <div class="row product-links">
                                 <div class="four columns">
                                     <ul class="products-list">
-                                        <li data-index="1"><i class="icon-right-open"></i>Baking and Pastry Supplies</li>
+                                        <li data-index="1" class="switch"  gumby-trigger="#modal1"><i class="icon-right-open"></i>Baking and Pastry Supplies</li>
                                         <li data-index="2"><i></i>Bar & Beverage Service</li>
                                         <li data-index="3"><i></i>Beans & Legumes</li>
                                         <li data-index="4"><i></i>Bread, Tortillas & Wraps</li>
@@ -162,9 +162,11 @@
                                         <li data-index="23"><i></i>Seafood Specialties</li>
                                         <li data-index="24"><i></i>Sugar, Specialty Sugar & Substitutes</li>
                                         <li data-index="25"><i></i>Vegetables</li>
-                                        <li data-index="26"><i></i>Vinegar</li>
+                                        <li data-index="26" class="switch"  gumby-trigger="#modal1"><i></i>Vinegar</li>
                                     </ul>
                                 </div>
+
+                                <!--<p class="btn primary medium"><a href="#" class="switch" gumby-trigger="#modal1">Open Modal</a></p>-->
                             </div>
                         </div>
                     </div>
@@ -348,6 +350,28 @@
 	<script src="//ajax.googleapis.com/ajax/libs/chrome-frame/1.0.3/CFInstall.min.js"></script>
 	<script>window.attachEvent('onload',function(){CFInstall.check({mode:'overlay'})})</script>
 	<![endif]-->
+
+    <div class="modal" id="modal1">
+        <div class="content">
+            <a class="close switch" gumby-trigger="|#modal1">
+                <i class="icon-cancel" /></i>
+            </a>
+            <div class="row">
+                <div class="twelve columns centered text-center">
+                    <h2>Baking and Pastry Supplies</h2>
+                    <p class="product-description">
+                        We have a wide selection of ingredients that are perfect for your pastry chefs and bakers. Create your delicatessens with the richest ingredients that we have to offer.
+                    </p>
+                    <img class="product-modal-img" src="img/products/bakery-supply.jpg" alt=""/>
+                    <p>
+                        <a href="#" class="switch" gumby-trigger="|#modal1">
+                            Back to all products
+                        </a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
 
   </body>
 </html>

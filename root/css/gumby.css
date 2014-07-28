@@ -3076,7 +3076,8 @@ ul.inline-list li i:hover { color: #e0cc92; }
 
 .products-slogan { margin: 0; font-style: italic; }
 
-.products-list li { font-size: .8rem; padding: 0 0 0 10px; line-height: 1.56rem; cursor: pointer; }
+.products-list { margin: 0 0 2em; }
+.products-list li { font-size: .8rem; padding: 0 0 0 10px; line-height: 1.6rem; cursor: pointer; }
 .products-list li i { font-family: "entypo"; display: inline-block; visibility: hidden; margin: 0 0 0 -10px; min-width: 10px; }
 
 .txt-middle { font-size: 1.7em; }
