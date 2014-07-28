@@ -10,7 +10,8 @@ $(function () {
 
 $(function () {
     // ----- services page maps -----------
-    if ($('#services').length) {
+    if ($('.services').length) {
+
         var mapSpringfield = new GMaps({
                 el: '#mapSpringfield',
                 lat: 38.743830,
@@ -57,12 +58,13 @@ $(function () {
 $(function () {
     // ----- gallery page  -----------
     var gallery = $('#gallery');
-    gallery.photobox('li a',{
+
+    if (gallery.length) {
+        gallery.photobox('li a',{
             time: 0
         });
-    if (gallery) {
+
         $(window).load(function() {
-            console.log('fgf');
             gallery.masonry({
                     itemSelector: 'li'
                 });
