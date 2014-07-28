@@ -95,6 +95,7 @@ $(function () {
 
 $(function () {
     if ($('#products').length) {
+        console.log('dcsdc');
         var links = $('.product-links');
         var images = $('.product-images img');
 
