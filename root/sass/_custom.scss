@@ -454,6 +454,9 @@ ul.inline-list {
 .italic {
   font-style: italic;
 }
+.relative {
+  position: relative;
+}
 
 .line-small {
   background: $horizontal-rule-color;
@@ -519,5 +522,71 @@ ul.inline-list {
 
   .ps-scrollbar-x-rail {
     display: none !important;
+  }
+}
+
+
+
+
+.product-preview {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+}
+.product-images {
+  @extend .product-preview;
+  min-height: 300px;
+  overflow: hidden;
+}
+
+@include keyframes(moveRight) {
+  0% {
+    @include translateX(50px);
+  }
+  100% {
+    @include translateX(0);
+  }
+}
+
+@include keyframes(moveLeft) {
+  0% {
+    @include translateX(-50px);
+  }
+  100% {
+    @include translateX(0);
+  }
+}
+
+.moveRight {
+  @include animation(moveRight 1s)
+}
+
+.moveLeft {
+  @include animation(moveLeft 1s)
+}
+
+.products-slogan {
+  margin: 0;
+  font-style: italic;
+}
+
+.products-list {
+
+  li {
+    font-size: .8rem;
+    padding: 0 0 0 10px;
+    line-height: 1.56rem;
+    cursor: pointer;
+
+    i {
+      @extend .icon-right-open;
+      font-family: "entypo";
+      display: inline-block;
+      visibility: hidden;
+      margin: 0 0 0 -10px;
+      min-width: 10px;
+    }
   }
 }
