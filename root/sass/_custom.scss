@@ -457,6 +457,9 @@ ul.inline-list {
 .relative {
   position: relative;
 }
+.strong {
+  font-weight: $font-weight-bold;
+}
 
 .line-small {
   background: $horizontal-rule-color;
@@ -594,6 +597,7 @@ ul.inline-list {
 
 .product-modal-header {
   font-size: 2em;
+  padding-top: 0;
 }
 .product-modal-description {
 

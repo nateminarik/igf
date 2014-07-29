@@ -3018,6 +3018,8 @@ ul.inline-list li i:hover { color: #e0cc92; }
 
 .relative { position: relative; }
 
+.strong { font-weight: 700; }
+
 .line-small { background: #cccccc; margin: 0px 0 15px; border: none; height: 1px; }
 
 .services-list { margin-bottom: 1em; }
@@ -3080,7 +3082,7 @@ ul.inline-list li i:hover { color: #e0cc92; }
 .products-list li { font-size: .8rem; padding: 0 0 0 10px; line-height: 1.6rem; cursor: pointer; }
 .products-list li i { font-family: "entypo"; display: inline-block; visibility: hidden; margin: 0 0 0 -10px; min-width: 10px; }
 
-.product-modal-header { font-size: 2em; }
+.product-modal-header { font-size: 2em; padding-top: 0; }
 
 .txt-middle { font-size: 1.7em; }
 
