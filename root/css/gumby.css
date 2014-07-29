@@ -16,7 +16,6 @@
 * Free to use under the MIT license.
 * http://www.opensource.org/licenses/mit-license.php
 */
-
 @import url(//fonts.googleapis.com/css?family=Open+Sans:400,300,600,700);
 @import url(//fonts.googleapis.com/css?family=Vollkorn:400italic,700italic,400,700);
 @import url(../fonts/neris-black.css);
@@ -25,6 +24,7 @@
 html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video { margin: 0; padding: 0; border: 0; font: inherit; font-size: 100%; vertical-align: baseline; }
 
 html { line-height: 1; }
+
 ol, ul { list-style: none; }
 
 table { border-collapse: collapse; border-spacing: 0; }
@@ -292,7 +292,7 @@ html, body { height: 100%; }
 
 .icon-left-open.icon-left a:before, .icon-left-open.icon-right a:after, i.icon-left-open:before { content: "\e75d"; height: inherit; }
 
-.icon-right-open.icon-left a:before, .products-list li i.icon-left a:before, .icon-right-open.icon-right a:after, .products-list li i.icon-right a:after, i.icon-right-open:before, .products-list li i:before { content: "\e75e"; height: inherit; }
+.icon-right-open.icon-left a:before, .icon-right-open.icon-right a:after, i.icon-right-open:before { content: "\e75e"; height: inherit; }
 
 .icon-up-open.icon-left a:before, .icon-up-open.icon-right a:after, i.icon-up-open:before { content: "\e75f"; height: inherit; }
 
@@ -2931,6 +2931,7 @@ table.rounded thead th, table.rounded thead td, table.rounded caption + tbody tr
 @media only screen and (min-width: 960px) { .top-section { margin-top: 0.5em; margin-left: auto; font-size: 2.4em; } }
 
 .bottom-section-slogan { display: block; padding-right: 35%; color: #333333; font-size: 2em; font-family: "Rage Italic"; line-height: 2em; /*should be 1 !!!!!*/ }
+@media only screen and (max-width: 768px) { .bottom-section-slogan { padding-right: 0; } }
 
 ul.inline-list li { display: inline; float: right; }
 ul.inline-list li i { margin-top: 1.1em; font-size: 1.6em; color: #fff; }
@@ -2949,6 +2950,7 @@ ul.inline-list li i:hover { color: #e0cc92; }
 .content .row { padding-top: 1.5em; z-index: 2; }
 .content .row h3 { font-size: 1.8em; text-shadow: 1px 1px 2px white, 0px 0px 0px black, 0px 0px 1px white; }
 .content .row h4 { font-size: 2.0em; text-shadow: 1px 1px 2px white, 0px 0px 0px black, 0px 0px 1px white; }
+@media only screen and (max-width: 768px) { .content { margin-top: 0; } }
 
 .with-space { margin-top: 100px; position: relative; }
 @media only screen and (min-width: 360px) { .with-space { margin-top: 120px; } }
@@ -3016,8 +3018,6 @@ ul.inline-list li i:hover { color: #e0cc92; }
 
 .italic { font-style: italic; }
 
-.relative { position: relative; }
-
 .line-small { background: #cccccc; margin: 0px 0 15px; border: none; height: 1px; }
 
 .services-list { margin-bottom: 1em; }
@@ -3035,50 +3035,6 @@ ul.inline-list li i:hover { color: #e0cc92; }
 
 .gallery-wrp { padding-right: 10px; position: relative; overflow: hidden; }
 .gallery-wrp .ps-scrollbar-x-rail { display: none !important; }
-
-.product-preview, .product-images { position: absolute; left: 0; top: 0; width: 100%; height: 100%; }
-
-.product-images { min-height: 300px; overflow: hidden; }
-
-@-moz-keyframes moveRight { 0% { -moz-transform: translateX(50px); transform: translateX(50px); }
-  100% { -moz-transform: translateX(0); transform: translateX(0); } }
-
-@-webkit-keyframes moveRight { 0% { -webkit-transform: translateX(50px); transform: translateX(50px); }
-  100% { -webkit-transform: translateX(0); transform: translateX(0); } }
-
-@-o-keyframes moveRight { 0% { -o-transform: translateX(50px); transform: translateX(50px); }
-  100% { -o-transform: translateX(0); transform: translateX(0); } }
-
-@-ms-keyframes moveRight { 0% { -ms-transform: translateX(50px); transform: translateX(50px); }
-  100% { -ms-transform: translateX(0); transform: translateX(0); } }
-
-@keyframes moveRight { 0% { transform: translateX(50px); }
-  100% { transform: translateX(0); } }
-
-@-moz-keyframes moveLeft { 0% { -moz-transform: translateX(-50px); transform: translateX(-50px); }
-  100% { -moz-transform: translateX(0); transform: translateX(0); } }
-
-@-webkit-keyframes moveLeft { 0% { -webkit-transform: translateX(-50px); transform: translateX(-50px); }
-  100% { -webkit-transform: translateX(0); transform: translateX(0); } }
-
-@-o-keyframes moveLeft { 0% { -o-transform: translateX(-50px); transform: translateX(-50px); }
-  100% { -o-transform: translateX(0); transform: translateX(0); } }
-
-@-ms-keyframes moveLeft { 0% { -ms-transform: translateX(-50px); transform: translateX(-50px); }
-  100% { -ms-transform: translateX(0); transform: translateX(0); } }
-
-@keyframes moveLeft { 0% { transform: translateX(-50px); }
-  100% { transform: translateX(0); } }
-
-.moveRight { -webkit-animation: moveRight 1s; -moz-animation: moveRight 1s; -ms-animation: moveRight 1s; -o-animation: moveRight 1s; animation: moveRight 1s; }
-
-.moveLeft { -webkit-animation: moveLeft 1s; -moz-animation: moveLeft 1s; -ms-animation: moveLeft 1s; -o-animation: moveLeft 1s; animation: moveLeft 1s; }
-
-.products-slogan { margin: 0; font-style: italic; }
-
-.products-list { margin: 0 0 2em; }
-.products-list li { font-size: .8rem; padding: 0 0 0 10px; line-height: 1.6rem; cursor: pointer; }
-.products-list li i { font-family: "entypo"; display: inline-block; visibility: hidden; margin: 0 0 0 -10px; min-width: 10px; }
 
 .txt-middle { font-size: 1.7em; }
 
