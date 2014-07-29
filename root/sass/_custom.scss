@@ -20,7 +20,7 @@
   a img {
     margin-top: 32px;
     position: absolute;
-    z-index: 9999;
+    z-index: 999999;
     width: 80px;
     @include respond("min-width: 400px") {
       margin-top: 0;
