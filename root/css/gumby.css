@@ -2931,6 +2931,7 @@ table.rounded thead th, table.rounded thead td, table.rounded caption + tbody tr
 @media only screen and (min-width: 960px) { .top-section { margin-top: 0.5em; margin-left: auto; font-size: 2.4em; } }
 
 .bottom-section-slogan { display: block; padding-right: 35%; color: #333333; font-size: 2em; font-family: "Rage Italic"; line-height: 2em; /*should be 1 !!!!!*/ }
+@media only screen and (max-width: 768px) { .bottom-section-slogan { padding-right: 0; } }
 
 ul.inline-list li { display: inline; float: right; }
 ul.inline-list li i { margin-top: 1.1em; font-size: 1.6em; color: #fff; }
@@ -2949,6 +2950,7 @@ ul.inline-list li i:hover { color: #e0cc92; }
 .content .row { padding-top: 1.5em; z-index: 2; }
 .content .row h3 { font-size: 1.8em; text-shadow: 1px 1px 2px white, 0px 0px 0px black, 0px 0px 1px white; }
 .content .row h4 { font-size: 2.0em; text-shadow: 1px 1px 2px white, 0px 0px 0px black, 0px 0px 1px white; }
+@media only screen and (max-width: 768px) { .content { margin-top: 0; } }
 
 .with-space { margin-top: 100px; position: relative; }
 @media only screen and (min-width: 360px) { .with-space { margin-top: 120px; } }

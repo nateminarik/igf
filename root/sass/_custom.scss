@@ -125,6 +125,10 @@
   font-size: 2em;
   font-family: $tagline;
   line-height: 2em;/*should be 1 !!!!!*/
+
+  @include respond("max-width: 768px") {
+    padding-right: 0;
+  }
 }
 
 ul.inline-list {
@@ -196,6 +200,10 @@ ul.inline-list {
               0px 0px 1px lighten(#dddddd, 80%)
       );
     }
+  }
+
+  @include respond("max-width: 768px") {
+    margin-top: 0;
   }
 }
 
