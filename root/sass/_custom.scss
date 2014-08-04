@@ -13,33 +13,33 @@
   @include respond("min-width: 960px") {
     height: 136px;
     background: url(../img/header-bg.png) repeat-x;
-  } 
+  }
 }
 
 .logo {
   a img {
     margin-top: 32px;
     position: absolute;
-    z-index: 9999;
+    z-index: 999999;
     width: 80px;
     @include respond("min-width: 400px") {
       margin-top: 0;
       position: absolute;
       width: 130px;
     }
-      @include respond("min-width: 600px") {
-        margin-top: 30px;
+    @include respond("min-width: 600px") {
+      margin-top: 30px;
       position: absolute;
-        width: 150px;
-      }
-      @include respond("min-width: 768px") {
-        width: 150px;
-      }
-      @include respond("min-width: 960px") {
-        margin-top: 0;
-        position: relative;
-        width: 250px;
-      }
+      width: 150px;
+    }
+    @include respond("min-width: 768px") {
+      width: 150px;
+    }
+    @include respond("min-width: 960px") {
+      margin-top: 0;
+      position: relative;
+      width: 250px;
+    }
   }
 }
 
@@ -299,7 +299,7 @@ ul.inline-list {
   margin-top: -16px;
   position: absolute;
   @include respond("min-width: 600px") {
-      margin-top: -16px;
+    margin-top: -16px;
   }
   @include respond("min-width: 960px") {
     margin-top: -79px;
@@ -545,6 +545,9 @@ ul.inline-list {
   top: 0;
   width: 100%;
   height: 100%;
+}
+.product-images_wrp {
+  min-height: 300px;
 }
 .product-images {
   @extend .product-preview;
