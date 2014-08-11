@@ -53,6 +53,22 @@ $(function () {
             }
         });
     }
+    if($('.contacts').length) {
+        var mapSpringfield = new GMaps({
+            el: '#mapSpringfield',
+            lat: 38.743830,
+            lng: -77.202341,
+            zoom: 17,
+            disableDefaultUI: true
+        });
+        mapSpringfield.addMarker({
+            lat: 38.743830,
+            lng: -77.202341,
+            infoWindow: {
+                content: '7520 Fullerton Rd <br>Springfield,VA 22153, <br><strong>+1 703-569-4520</strong>'
+            }
+        });
+    }
 });
 
 $(function () {
@@ -119,3 +135,9 @@ $(function () {
         })
     }
 });
+
+
+$(function () {
+    Placeholdem($('[placeholder]'));
+});
+
