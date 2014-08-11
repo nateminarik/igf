@@ -65,9 +65,9 @@ $(function () {
         });
 
         $(window).load(function() {
-            gallery.masonry({
-                    itemSelector: 'li'
-                });
+//            gallery.masonry({
+//                    itemSelector: 'li'
+//                });
 
             $(window).on('resize', function () {
                 buildScrollbar();

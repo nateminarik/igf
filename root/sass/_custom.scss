@@ -508,19 +508,21 @@ ul.inline-list {
       z-index: 2;
 
       img {
-        @include scale(1.1);
         @include box-shadow(#4e4e4e 0 1px 3px);
         @include transition(.1s);
-        border: 1px solid #ffffff
+        border: 1px solid #b6b6b6;
       }
     }
 
     a {
       display: inline-block;
       float: left;
+      width: 100%;
 
       img {
         float: left;
+        width: 100%;
+        border: 1px solid transparent;
       }
     }
   }
