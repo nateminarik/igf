@@ -56,7 +56,7 @@
 
 	<div class="modal" id="modal1">
 		<div class="content">
-			<a class="close switch" gumby-trigger="|#modal1"><i class="icon-cancel" /></i></a>
+			<a class="close switch" data-trigger="|#modal1"><i class="icon-cancel" /></i></a>
 			<div class="row">
 				<div class="ten columns centered text-center">
 					<h2>This is a modal.</h2>
@@ -68,7 +68,7 @@
 
 	<div class="navbar" id="nav1">
 		<div class="row">
-			<a class="toggle" gumby-trigger="#nav1 > .row > ul" href="#"><i class="icon-menu"></i></a>
+			<a class="toggle" data-trigger="#nav1 > .row > ul" href="#"><i class="icon-menu"></i></a>
 			<h1 class="four columns logo">
 				<a href="#">
 					<img src="img/gumby_mainlogo.png" gumby-retina />
@@ -111,7 +111,7 @@
 		</div>
 	</div>
 	<div class="navbar row" id="nav2">
-		<a class="toggle" gumby-trigger="#nav2 > ul" href="#"><i class="icon-menu"></i></a>
+		<a class="toggle" data-trigger="#nav2 > ul" href="#"><i class="icon-menu"></i></a>
 		<h1 class="four columns logo">
 			<a href="#">
 				<img src="img/gumby_mainlogo.png" gumby-retina />
@@ -144,7 +144,7 @@
 	<div class="navcontain">
 		<div class="pretty navbar" gumby-fixed="top" id="nav3">
 			<div class="row">
-				<a class="toggle" gumby-trigger="#nav3 > .row > ul" href="#"><i class="icon-menu"></i></a>
+				<a class="toggle" data-trigger="#nav3 > .row > ul" href="#"><i class="icon-menu"></i></a>
 				<h1 class="four columns logo">
 					<a href="#">
 						<img src="img/gumby_mainlogo.png" gumby-retina />
@@ -172,7 +172,7 @@
 	</div>
 
 	<div class="pretty navbar row" id="nav4">
-		<a class="toggle" gumby-trigger="#nav4 > ul" href="#"><i class="icon-menu"></i></a>
+		<a class="toggle" data-trigger="#nav4 > ul" href="#"><i class="icon-menu"></i></a>
 		<h1 class="four columns logo">
 			<a href="#">
 				<img src="img/gumby_mainlogo.png" gumby-retina />
@@ -200,7 +200,7 @@
 		<h1 class="lead">Typography</h1>
 		<div class="row">
 			<!-- Switch triggered when skiplink completes in main.js -->
-			<p><a href="#" id="skip-switch" class="skip switch" gumby-trigger="#drawer1" gumby-goto="#drawers" gumby-duration="500" gumby-offset="-130" gumby-update>Skip to drawers and open top one</a></p>
+			<p><a href="#" id="skip-switch" class="skip switch" data-trigger="#drawer1" gumby-goto="#drawers" gumby-duration="500" gumby-offset="-130" gumby-update>Skip to drawers and open top one</a></p>
 			<h1>My Cool First Level Headline reaalllyyy long headline</h1>
 			<p>This is my awesome paragraph text, it is the base style/size for paragraph text. We love 16px for body copy as it provides for a more consistent cross browser experience. It is also digitally equivalent to to 12pt standard set in print design. We also love the golden ratio, all of the type set here is based off of that deliciously elegant ratio. Enjoy!</p>
 			<p>This is my awesome paragraph text, it is the base style/size for paragraph text. We love 16px for body copy as it provides for a more consistent cross browser experience. It is also digitally equivalent to to 12pt standard set in print design. We also love the golden ratio, all of the type set here is based off of that deliciously elegant ratio. Enjoy!</p>
@@ -688,13 +688,13 @@
 	<div class="row" id="drawers">
 		<h1 class="lead">Drawers</h1>
 		<p class="btn medium primary">
-			<a href="#"  class="switch" gumby-trigger="#drawer1">Open Top Drawer</a>
+			<a href="#"  class="switch" data-trigger="#drawer1">Open Top Drawer</a>
 		</p>
 		<p class="btn medium primary">
-			<a href="#"  class="toggle" gumby-trigger="#drawer2|#drawer3">Toggle Bottom Drawers</a>
+			<a href="#"  class="toggle" data-trigger="#drawer2|#drawer3">Toggle Bottom Drawers</a>
 		</p>
 		<p class="btn medium primary">
-			<a href="#"  class="switch" gumby-trigger="|.drawer">Close All Drawers</a>
+			<a href="#"  class="switch" data-trigger="|.drawer">Close All Drawers</a>
 		</p>
 		<div class="row">
 			<div class="twelve columns">
@@ -718,7 +718,7 @@
 	</div>
 	<div class="row" id="modals">
 		<h1 class="lead">Modals</h1>
-		<p class="btn primary medium"><a href="#" class="switch" gumby-trigger="#modal1">Open Modal</a></p>
+		<p class="btn primary medium"><a href="#" class="switch" data-trigger="#modal1">Open Modal</a></p>
 	</div>
 	<div class="row">
 		<h1 class="lead">Skip Links</h1>

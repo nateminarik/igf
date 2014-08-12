@@ -60,7 +60,7 @@
   		<div class="nav-container">
 			<div class="row navbar" id="nav1">
 			<!-- Toggle for mobile navigation, targeting the <ul> -->
-				<a class="toggle" gumby-trigger="#nav1 > ul" href="#"><i class="icon-menu"></i></a>
+				<a class="toggle" data-trigger="#nav1 > ul" href="#"><i class="icon-menu"></i></a>
 				<ul class="eight columns">
 					<li><a href="about.html">About</a></li>
 					<li><a href="products.html">Products</a></li>
@@ -150,12 +150,14 @@
 			<div class="comp-info">
 				<div class="row">
 					<div class="twelve columns">
-						<h5 class="comp-name">International Gourmet Foods Inc.</h5>
-						<address>
-							7520 Fullerton Rd.
-							Springfield, VA 22153
-						</address>
-						<a href="#" class="news-signup">NEWSLETTER SIGNUP</a>
+                        <div class="footer-buffer">
+                            <h5 class="comp-name">International Gourmet Foods Inc.</h5>
+                            <address>
+                                7520 Fullerton Rd.
+                                Springfield, VA 22153
+                            </address>
+                            <a href="#" class="news-signup">NEWSLETTER SIGNUP</a>
+                        </div>
 						<a href="tel:7035694520"><i class="icon-phone"></i>703-569-4520</a>
 						<a href="mailto:info@igf-inc.com"><i class="icon-mail"></i>info@igf-inc.com</a>
 					</div>
@@ -261,8 +263,6 @@
 		        	}
 		 
 		            $(footernews).append($(footerhtml));
-		             
-
 
 		        });
 		    });
