@@ -98,30 +98,59 @@
 	</div><!-- end shadow -->
 </div><!-- end content -->
 
-<div class="page-shadow">
-	<div class="footer">
-		<div class="row">
-			<div class="seven columns">
-				&copy; International Gourmet Foods Inc.
-			</div>
-			<div class="five columns">
-				<div class="row">
-					<div class="three columns">
-						<img src="img/logo.svg" />
-					</div>
-					<div class="nine columns">
-						<h5 class="inc-info">I N T E R N A T I O N A L</h5>
-						<h5 class="inc-info">GOURMET FOODS INC.</h5>
-						<address>
-							1234 Fullerton Rd.
-							Springfield, VA 20155
-						</address>
-						<a href="tel:7031235678">703-123-5678</a>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
+<div class="footer">
+    <div class="row">
+        <div class="four columns">
+            <h4 class="text-center">Events</h4>
+            <hr>
+            <div id="footeroutput"></div>
+        </div>
+        <div class="four columns">
+            <h4 class="text-center">Quick Links</h4>
+            <hr>
+            <div class="row">
+                <div class="six columns">
+                    <ul>
+                        <li class="text-center"><a href="products.html">Products</a></li>
+                        <li class="text-center"><a href="#">Locations</a></li>
+                        <li class="text-center"><a href="#">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="six columns">
+                    <ul>
+                        <li class="text-center"><a href="#">Services</a></li>
+                        <li class="text-center"><a href="#">Specialists</a></li>
+                        <li class="text-center"><a href="#">Sitemap</a></li>
+                    </ul>
+                </div>
+                <div class="twelve columns">
+                    <div class="text-center social-icons">
+                        <a href="https://www.facebook.com/pages/International-Gourmet-Foods-Inc/220287301990"><i class="icon-facebook-circled"></i></a>
+                        <a href="#"><i class="icon-rss"></i></a>
+                        <a href="http://www.linkedin.com/company/2575672"><i class="icon-linkedin-circled"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="four columns">
+            <h4 class="text-center">Contact Us</h4>
+            <hr>
+            <div class="comp-info">
+                <div class="row">
+                    <div class="twelve columns">
+                        <h5 class="comp-name">International Gourmet Foods Inc.</h5>
+                        <address>
+                            7520 Fullerton Rd.
+                            Springfield, VA 22153
+                        </address>
+                        <a href="#" class="news-signup">NEWSLETTER SIGNUP</a>
+                        <a href="tel:7035694520"><i class="icon-phone"></i>703-569-4520</a>
+                        <a href="mailto:info@igf-inc.com"><i class="icon-mail"></i>info@igf-inc.com</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
 
 
@@ -165,6 +194,49 @@
 	<script src="bower_components/gumby/js/main.js"></script>
     <script src="js/placeholdem.js"></script>
 
+    <script>
+        $(document).ready(function()
+        {
+            var footernews = document.getElementById("footeroutput");
+            $.get('rss.xml', function(d){
+
+                $(d).find('item').first().each(function(){
+
+                    var $item = $(this);
+                    var title = $item.find('title').text();
+                    var description = $item.find('description').text();
+                    var address = $item.find('address').text();
+                    var imageurl = $item.find('mainpicture').text();
+                    var html = "";
+                    var footerhtml = "";
+
+                    if (imageurl === ""){
+                        footerhtml = '<span id=\"footer-recent\">';
+                        footerhtml += '<span class=\"title\">' + title + '</span>';
+                        footerhtml +=  description.substring(0, 260);
+                        footerhtml += '... <a href=\"events.html\">More</a></p>';
+                        footerhtml += '<a href=\"events.html\"><i class=\"icon-doc-text\"></i>News &amp; Events</a></span>';
+
+
+                    }
+                    else {
+
+                        footerhtml = '<span id=\"footer-recent\">';
+                        footerhtml += '<span class=\"title\">' + title + '</span>';
+                        footerhtml +=  description.substring(0, 60);
+                        footerhtml +=  '<img alt="" src="img/events/' + imageurl + '" />';
+                        footerhtml += description.substring(60, 260);
+                        footerhtml += '... <a href=\"events.html\">More</a></p>';
+                        footerhtml += '<a href=\"events.html\"><i class=\"icon-doc-text\"></i>News &amp; Events</a></span>';
+
+                    }
+
+                    $(footernews).append($(footerhtml));
+
+                });
+            });
+        });
+    </script>
 
 	<!-- Change UA-XXXXX-X to be your site's ID -->
 	<!--<script>
