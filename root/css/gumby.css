@@ -2983,12 +2983,11 @@ ul.inline-list li i:hover { color: #e0cc92; }
 
 /*-------- footer -----------*/
 .footer { padding: 1.5em 0 1.2em; width: 100%; background: #3f6633; border-top: #b6922a 4px solid; color: #fff; font-family: "nerislight"; }
-.footer #footer-recent { width: 100%; display: block; margin-bottom: 1em; }
-.footer #footer-recent span.title { margin: 0 auto; font-size: 1.2em; font-family: "nerislight"; display: block; text-align: left; text-decoration: underline; }
-.footer #footer-recent p { margin: 0 auto; color: #fff; float: left; display: block; text-align: justify; font-family: "nerislight"; line-height: 1.3em; }
-.footer #footer-recent p img { padding: 0.1em 0.7em 0.1em 0; max-width: 43%; float: left; }
-.footer #footer-recent p a { display: inline; padding: 0 0.3em; margin: auto 0; float: none; font-size: 1em; text-decoration: underline; }
-.footer #footer-recent a { margin: 0.8em auto 0; padding-right: 1.3em; float: left; display: inline; position: relative; text-align: center; font-size: 0.9em; }
+.footer #footeroutput { width: 100%; display: block; margin-bottom: 1em; }
+.footer #footeroutput span.title { margin: 0 auto; font-size: 1.2em; font-family: "nerislight"; display: block; text-align: left; text-decoration: underline; height: 1.5em; }
+.footer #footeroutput p { margin: 0 auto; color: #fff; float: left; display: block; text-align: justify; font-family: "nerislight"; line-height: 1.3em; }
+.footer #footeroutput p img { padding: 0.1em 0.7em 0.1em 0; max-width: 43%; float: left; }
+.footer #footeroutput p a { display: inline; padding: 0 0.3em; margin: auto 0; float: none; font-size: 1em; text-decoration: underline; }
 .footer .social-icons { margin-left: -1em; }
 .footer .social-icons a i { margin-top: 0.3em; font-size: 1.4em; }
 .footer a { color: #fff; }
@@ -3028,8 +3027,23 @@ ul.inline-list li i:hover { color: #e0cc92; }
 
 .address-box { -webkit-border-radius: 5px; -moz-border-radius: 5px; -ms-border-radius: 5px; -o-border-radius: 5px; border-radius: 5px; border: 1px solid #cccccc; background: #ededed; padding: 1px 10px; color: #4a4d50; font-size: .9rem; }
 
-#output { padding-bottom: 2em; }
-#output .address-box { margin-bottom: 2em; }
+#outputFuture, #outputPast { padding-bottom: 2em; }
+#outputFuture .address-box, #outputPast .address-box { margin-bottom: 2em; }
+#outputFuture .map, #outputPast .map { margin-bottom: 13px; }
+
+.one-row { width: 100%; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+
+.footer-buffer { height: 4.8em; line-height: 1.2em; overflow: hidden; }
+@media only screen and (max-width: 1000px) { .footer-buffer { height: auto; } }
+
+.footer-more { display: block; width: 100%; margin: 0; text-align: left; }
+
+.footer-link-events { display: block; width: 100%; text-align: center; }
+
+.event-title { font-size: 1.7em; line-height: 1.5; padding: 0; }
+
+.events-block-title { position: relative; text-align: center; font-family: "Rage Italic"; color: #b6922a; font-size: 3em; padding: 0; margin: 0 0 .5em; }
+.events-block-title:after { background-image: -webkit-gradient(linear, 0% 50%, 100% 50%, color-stop(0%, rgba(224, 204, 146, 0)), color-stop(50%, #b6922a), color-stop(100%, rgba(224, 204, 146, 0))); background-image: -webkit-linear-gradient(left, rgba(224, 204, 146, 0), #b6922a, rgba(224, 204, 146, 0)); background-image: -moz-linear-gradient(left, rgba(224, 204, 146, 0), #b6922a, rgba(224, 204, 146, 0)); background-image: -o-linear-gradient(left, rgba(224, 204, 146, 0), #b6922a, rgba(224, 204, 146, 0)); background-image: linear-gradient(left, rgba(224, 204, 146, 0), #b6922a, rgba(224, 204, 146, 0)); position: absolute; content: ''; height: 1px; width: 100%; bottom: 0; left: 0; }
 
 .events_gallery li { display: inline-block; float: left; margin-right: 0.273em; }
 .events_gallery li:hover { z-index: 2; }

@@ -583,49 +583,7 @@
 		    
 	});
 </script>
-	<script>
-		$(document).ready(function()
-		      {
-		      	var footernews = document.getElementById("footeroutput");
-		        $.get('rss.xml', function(d){
-		 
-		        $(d).find('item').first().each(function(){
-		 
-		            var $item = $(this); 
-		            var title = $item.find('title').text();
-		            var description = $item.find('description').text();
-		            var address = $item.find('address').text();
-		            var imageurl = $item.find('mainpicture').text();
-		            var html = "";
-		            var footerhtml = "";
-		 			
-		 			if (imageurl === ""){
-		 				footerhtml = '<span id=\"footer-recent\">';
-		 				footerhtml += '<span class=\"title\">' + title + '</span>';
-		            	footerhtml +=  description.substring(0, 260);
-		            	footerhtml += '... <a href=\"events.html\">More</a></p>';
-		            	footerhtml += '<a href=\"events.html\"><i class=\"icon-doc-text\"></i>News &amp; Events</a></span>';
 
-
-		 			}
-		            else {
-
-		            	footerhtml = '<span id=\"footer-recent\">';
-		            	footerhtml += '<span class=\"title\">' + title + '</span>';
-		            	footerhtml +=  description.substring(0, 60);
-		            	footerhtml +=  '<img alt="" src="img/events/' + imageurl + '" />';
-		            	footerhtml += description.substring(60, 260);
-		            	footerhtml += '... <a href=\"events.html\">More</a></p>';
-		            	footerhtml += '<a href=\"events.html\"><i class=\"icon-doc-text\"></i>News &amp; Events</a></span>';
-
-		        	}
-		 
-		            $(footernews).append($(footerhtml));
-		             
-		        });
-		    });
-		});
-	</script>
 
 	<!-- Change UA-XXXXX-X to be your site's ID -->
 	<!--<script>
@@ -642,6 +600,7 @@
 	<script>window.attachEvent('onload',function(){CFInstall.check({mode:'overlay'})})</script>
 	<![endif]-->
     <script src="js/placeholdem.js"></script>
-
+    <script src="js/underscore.js"></script>
+    <script src="js/script.js"></script>
   </body>
 </html>

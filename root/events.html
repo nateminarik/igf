@@ -89,7 +89,12 @@
 
         <div class="row">
             <div class="eight columns">
-                <div id="output"></div>
+                <div id="outputFuture">
+                    <h2 class="events-block-title">Upcoming Events</h2>
+                </div>
+                <div id="outputPast">
+                    <h2 class="events-block-title">Past Events</h2>
+                </div>
             </div>
             <div class="four columns gallery-wrp">
                 <ul class="gallery events_gallery clearfix" id="gallery">
@@ -221,84 +226,9 @@
 <script src="js/perfect-scrollbar.js"></script>
 <script src="js/photobox.js"></script>
 <script src="js/placeholdem.js"></script>
+<script src="js/underscore.js"></script>
 <script src="js/script.js"></script>
 
-<script>
-    $(document).ready(function()
-    {
-        var news = document.getElementById("output");
-        var footernews = document.getElementById("footeroutput");
-        var counter = 0;
-
-        $.get('rss.xml', function(d){
-
-            $(d).find('item').each(function () {
-                buildOneEvent.call(this, counter);
-                counter++;
-            });
-
-            function buildOneEvent(counter){
-
-                var $item = $(this);
-                var title = $item.find('title').text();
-                var description = $item.find('description').text();
-                var address = $item.find('address').text();
-                var imageurl = $item.find('mainpicture').text().trim();
-                var html = "";
-                var footerhtml = "";
-
-                if (imageurl === ""){
-                    html = '<h2>' + title + '</h2>';
-                    html += '<div id="map'+ counter +'" style="height: 250px"></div>';
-                    html +=  description;
-                    html += '<p class="address-box">' + address + '</p>';
-                    if (counter < 1) {
-                        footerhtml = '<span id=\"footer-recent\">';
-                        footerhtml += '<span class=\"title\">' + title + '</span>';
-                        footerhtml +=  description.trim(description).substring(0, 50);
-                        footerhtml += description.substring(50, 260) ;
-                        footerhtml += '<a href=\"events.html\">More</a></p>';
-                        footerhtml += '<a href=\"events.html\"><i class=\"icon-doc-text\"></i>News &amp; Events</a></span>';
-                    }
-                    $.get('http://maps.google.com/maps/api/geocode/json?address=' + address + 'sensor=false', function (response) {
-
-                        var location = response.results[0].geometry.location;
-                        var map1 = new GMaps({
-                            el: '#map' + counter + '',
-                            lat: location.lat,
-                            lng: location.lng
-                        }).addMarker({
-                                    lat: location.lat,
-                                    lng: location.lng,
-                                    infoWindow: {
-                                        content: address
-                                    }
-                                });
-
-                    });
-
-                }
-                else {
-                    html = '<h2>' + title + '</h2><img alt="" src="img/events/' + imageurl + '" />';
-                    html +=  description;
-                    html += '<p class="address-box">' + address + '</p>';
-                    if (counter < 1) {
-                        footerhtml = '<span id=\"footer-recent\">';
-                        footerhtml += '<span class=\"title\">' + title + '</span>';
-                        footerhtml +=  description.trim(description).substring(0, 50);
-                        footerhtml += description.substring(50, 260) ;
-                        footerhtml += '<a href=\"events.html\">More</a></p>';
-                        footerhtml += '<a href=\"events.html\"><i class=\"icon-doc-text\"></i>News &amp; Events</a></span>';
-                    }
-
-                }
-
-                $(news).append($(html));
-                $(footernews).append($(footerhtml));
-            }
-        });
-    });
-</script>
 
 <!-- Change UA-XXXXX-X to be your site's ID -->
 <!--<script>

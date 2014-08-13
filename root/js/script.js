@@ -141,3 +141,113 @@ $(function () {
     Placeholdem($('[placeholder]'));
 });
 
+
+// news & events
+$(function () {
+    var newsFuture = $("#outputFuture");
+    var newsPast = $("#outputPast");
+    var footerNews = $("#footeroutput");
+    var counter = 0;
+    var pastEvents = [];
+    var futureEvents = [];
+
+    $.get('rss.xml', function (response) {
+
+        $(response).find('item').each(function () {
+            sortEvents.call(this);
+        });
+
+        var sortedPast = _.sortBy(pastEvents, function (item) {
+            return Date.parse((item.find('date').text()).replace(/(\d{1,2})[^\d]{2}/, '$1'));
+        });
+        var sortedFuture = _.sortBy(futureEvents, function (item) {
+            return Date.parse((item.find('date').text()).replace(/(\d{1,2})[^\d]{2}/, '$1'));
+        });
+
+        sortedPast.reverse();
+
+        $(sortedFuture).each(function () {
+            buildOneEvent.call(this, counter, newsFuture);
+            counter++;
+        });
+
+        $(sortedPast).each(function () {
+            buildOneEvent.call(this, counter, newsPast);
+            counter++;
+        });
+
+        function sortEvents () {
+            var $item = $(this);
+            var now = Date.now();
+            // add one more day (to show today's events in future block). remove '+ 86400000' if it should be in past
+            var eventDate = Date.parse(($item.find('date').text()).replace(/(\d{1,2})[^\d]{2}/, '$1')) + 86400000;
+            eventDate < now ? pastEvents.push($item) : futureEvents.push($item);
+        }
+
+        function buildOneEvent(counter, newsBlock){
+            var $item = $(this);
+            var date = $item.find('date').text();
+            var title = $item.find('title').text();
+            var description = $item.find('description').text();
+            var address = $item.find('address').text();
+            var imageurl = $item.find('mainpicture').text().trim();
+            var html = "";
+            var footerhtml = "";
+
+            if (imageurl === "") {
+                html = '<h2 class="event-title">' + title + '</h2>';
+                html += '<p class="italic">' + date + '</p>';
+                html += '<div id="map'+ counter +'" style="height: 250px" class="map"></div>';
+                html +=  description;
+                html += '<p class="address-box">' + address + '</p>';
+
+                if (counter < 1) {
+                    footerhtml = '<span id="footer-recent">';
+                    footerhtml += '<a href="events.html"><span class="title one-row">' + title + '</span></a>';
+                    var shortDescription = description.replace(/(<p>)/g, '').replace(/(<\/p>)/g, '<br/>').substr(0, 280);
+                    var cleanDescription = shortDescription.replace(/((<br\/$)|(<br$)|(<b$)|(<$))|( {1}.[^ ]*$)/, '');
+                    footerhtml += '<div class="footer-buffer">' + cleanDescription + ' ...</div>';
+                    footerhtml += '<a href="events.html" class="footer-more">More</a></p>';
+                    footerhtml += '<a href="events.html" class="footer-link-events"><i class=\"icon-doc-text\"></i>News &amp; Events</a></span>';
+                }
+
+                if (newsBlock.length) {
+                    $.get('http://maps.google.com/maps/api/geocode/json?address=' + address + 'sensor=false', function (response) {
+                        var location = response.results[0].geometry.location;
+                        var map1 = new GMaps({
+                            el: '#map' + counter + '',
+                            scrollwheel: false,
+                            lat: location.lat,
+                            lng: location.lng
+                        }).addMarker({
+                                lat: location.lat,
+                                lng: location.lng,
+                                infoWindow: {
+                                    content: address
+                                }
+                            });
+                    });
+                }
+            }
+            else {
+                html = '<h2 class="event-title">' + title + '</h2>';
+                html += '<p class="italic">' + date + '</p>';
+                html += '<img alt="" src="img/events/' + imageurl + '" />';
+                html +=  description;
+                html += '<p class="address-box">' + address + '</p>';
+                if (counter < 1) {
+                    footerhtml = '<span id="footer-recent">';
+                    footerhtml += '<a href="events.html"><span class="title one-row">' + title + '</span></a>';
+                    footerhtml += '<div class="footer-buffer">' + cleanDescription + ' ...</div>';
+                    footerhtml += '<a href="events.html" class="footer-more">More</a></p>';
+                    footerhtml += '<a href="events.html" class="footer-link-events"><i class=\"icon-doc-text\"></i>News &amp; Events</a></span>';
+                }
+            }
+
+            $(newsBlock).append($(html));
+            $(footerNews).append($(footerhtml));
+        }
+
+    });
+});
+

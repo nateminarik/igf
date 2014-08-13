@@ -314,7 +314,7 @@ ul.inline-list {
   border-top: #b6922a 4px solid;
   color: #fff;
   font-family: $footer-text;
-  #footer-recent {
+  #footeroutput {
     width: 100%;
     display: block;
     margin-bottom: 1em;
@@ -325,6 +325,7 @@ ul.inline-list {
       display: block;
       text-align: left;
       text-decoration: underline;
+      height: 1.5em;
     }
     p {
       margin: 0 auto;
@@ -349,15 +350,15 @@ ul.inline-list {
 
       }
     }
-    a {
-      margin: 0.8em auto 0;
-      padding-right: 1.3em;
-      float: left;
-      display: inline;
-      position: relative;
-      text-align: center;
-      font-size: 0.9em;
-    }
+//    a {
+//      margin: 0.8em auto 0;
+//      padding-right: 1.3em;
+//      float: left;
+//      display: inline;
+//      position: relative;
+//      text-align: center;
+//      font-size: 0.9em;
+//    }
   }
   .social-icons{
     margin-left: -1em;
@@ -489,11 +490,68 @@ ul.inline-list {
   font-size: .9rem;
 }
 
-#output {
+#outputFuture,
+#outputPast {
   padding-bottom: 2em;
 
   .address-box {
     margin-bottom: 2em;
+  }
+
+  .map {
+    margin-bottom: 13px;
+  }
+}
+
+.one-row {
+  width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.footer-buffer {
+  height: 4.8em;
+  line-height: 1.2em;
+  overflow: hidden;
+  @include respond("max-width: 1000px") {
+    height: auto;
+  }
+}
+.footer-more {
+  display: block;
+  width: 100%;
+  margin: 0;
+  text-align: left;
+}
+.footer-link-events {
+  display: block;
+  width: 100%;
+  text-align: center;
+}
+.event-title {
+  font-size: 1.7em;
+  line-height: 1.5;
+  padding: 0;
+}
+
+.events-block-title {
+  position: relative;
+  text-align: center;
+  font-family: $tagline;
+  color: $navbar-color;
+  font-size: 3em;
+  padding: 0;
+  margin: 0 0 .5em;
+
+  &:after {
+    @include background-image(linear-gradient(left, rgba(224,204,146,0), $navbar-color, rgba(224,204,146,0)));
+    position: absolute;
+    content: '';
+    height: 1px;
+    width: 100%;
+    bottom: 0;
+    left: 0;
   }
 }
 

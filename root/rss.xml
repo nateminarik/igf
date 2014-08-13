@@ -5,41 +5,16 @@
         <link>http://igf-inc.com/events.html</link>
         <description>Get the latest on events we showcase and promotional offers </description>
 
-        <!-- start event item -->
         <item>
-            <title>Upcoming Product Showcase</title>
-            <mainpicture></mainpicture>
+            <date>Monday, December 15th, 2013</date>
+            <title>Old event 2013 year Product Showcase</title>
+            <mainpicture>_DSC0243.JPG</mainpicture>
             <description>
                 <![CDATA[
             <p>
                Trade Only Please
             </p>
             <p>
-                Monday, September 15th, 2014
-                Crowne Plaza – Atlanta Perimeter at Ravinia | Ballroom
-            </p>
-            <p>
-                Join us in celebration of our 8th year in Georgia! We are featuring more than 50 vendors from around the world, with more than a 1,000 products on display and most available for you to try!
-            </p>
-          ]]>
-            </description>
-            <address>
-                4355 Ashford-Dunwoody Road, Atlanta, GA 30346
-            </address>
-        </item>
-        <!-- end event item -->
-
-        <!-- start event item -->
-        <item>
-            <title>Product Showcase</title>
-            <mainpicture>_DSC0243.JPG</mainpicture><!-- the name after location (i.e. "img.jpg") - put all pictures in img/events/ -->
-            <description>
-                <![CDATA[
-            <p>
-               Trade Only Please
-            </p>
-            <p>
-              Monday, July 21, 2014<br/>
               Embassy Suites North Charleston – Airport/Hotel & Convention Center<br />
               Ballroom C
             </p>
@@ -49,19 +24,39 @@
                 5055 International Boulevard North Charleston, SC 29418
             </address>
         </item>
-        <!-- end event item -->
 
-        <!-- start event item -->
         <item>
+            <date>Monday, August 14th, 2014</date>
+            <title>Closest event Upcoming Product Showcase name</title>
+            <mainpicture></mainpicture>
+            <description>
+                <![CDATA[
+            <p>
+               Trade Only Please
+            </p>
+            <p>
+                Crowne Plaza – Atlanta Perimeter at Ravinia | Ballroom
+            </p>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Join us in celebration of our 8th year in Georgia! We are featuring more than 50 vendors from around the world, with more than a 1,000 products on display and most available for you to try!
+            </p>
+          ]]>
+            </description>
+            <address>
+                840, South Spring Street, Los Angeles
+            </address>
+        </item>
+
+        <item>
+            <date>Monday, September 5th, 2014</date>
             <title>Test upcoming event</title>
-            <mainpicture></mainpicture><!-- the name after location (i.e. "img.jpg") - put all pictures in img/events/ -->
+            <mainpicture></mainpicture>
             <description>
                 <![CDATA[
             <p>
                Springfield Trade Only Please
             </p>
             <p>
-                Monday, September 15th, 2014
                 Crowne Plaza – Atlanta Perimeter at Ravinia | Ballroom
             </p>
           ]]>
@@ -71,7 +66,105 @@
                 Springfield, VA 22153
             </address>
         </item>
-        <!-- end event item -->
+
+        <item>
+            <date>Monday, October 22th, 2014</date>
+            <title>Future</title>
+            <mainpicture></mainpicture>
+            <description>
+                <![CDATA[
+            <p>
+               Springfield Trade Only Please
+            </p>
+            <p>
+                Crowne Plaza – Atlanta Perimeter at Ravinia | Ballroom
+            </p>
+          ]]>
+            </description>
+            <address>
+                900 E 2nd St
+                Ellsworth, KS 67439
+            </address>
+        </item>
+
+        <item>
+            <date>Monday, January 15th, 2014</date>
+            <title>Past</title>
+            <mainpicture>DSC_0844.JPG</mainpicture>
+            <description>
+                <![CDATA[
+            <p>
+               Springfield Trade Only Please
+            </p>
+            <p>
+                Crowne Plaza – Atlanta Perimeter at Ravinia | Ballroom
+            </p>
+          ]]>
+            </description>
+            <address>
+                South Lake Tahoe, CA 96150
+            </address>
+        </item>
+
+        <item>
+            <date>Monday, September 25th, 2014</date>
+            <title>Future</title>
+            <mainpicture></mainpicture>
+            <description>
+                <![CDATA[
+            <p>
+               Springfield Trade Only Please
+            </p>
+            <p>
+                Monday, September 25th, 2014
+                Crowne Plaza – Atlanta Perimeter at Ravinia | Ballroom
+            </p>
+          ]]>
+            </description>
+            <address>
+                840, South Spring Street, Los Angeles
+            </address>
+        </item>
+
+        <item>
+            <date>Monday, July 7th, 2014</date>
+            <title>Past</title>
+            <mainpicture></mainpicture>
+            <description>
+                <![CDATA[
+            <p>
+               Springfield Trade Only Please
+            </p>
+            <p>
+                Crowne Plaza – Atlanta Perimeter at Ravinia | Ballroom
+            </p>
+          ]]>
+            </description>
+            <address>
+                7520 Fullerton Rd.
+                Springfield, VA 22153
+            </address>
+        </item>
+
+        <item>
+            <date>Monday, July 5th, 2014</date>
+            <title>Past</title>
+            <mainpicture></mainpicture>
+            <description>
+                <![CDATA[
+            <p>
+               Springfield Trade Only Please
+            </p>
+            <p>
+                Crowne Plaza – Atlanta Perimeter at Ravinia | Ballroom
+            </p>
+          ]]>
+            </description>
+            <address>
+                7520 Fullerton Rd.
+                Springfield, VA 22153
+            </address>
+        </item>
 
     </channel>
 </rss>
