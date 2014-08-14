@@ -709,6 +709,10 @@ $bg: #3f6633;
     margin: .2em 0;
     outline: none !important;
     color: lighten($body-font-color, 15%);
+    &.error {
+      @include box-shadow(lighten($danger-color, 30%) 0px 0px 5px inset);
+      border-color: $danger-color;
+    }
 
     &:focus {
       @include box-shadow(lighten($navbar-color, 20%) 0px 0px 10px inset);
@@ -759,4 +763,9 @@ $bg: #3f6633;
   background: lighten($horizontal-rule-color, 13%);
   padding: 1px 10px;
   color: $info-color;
+  padding-top: 1em;
+
+  p {
+    margin-bottom: 5px;
+  }
 }

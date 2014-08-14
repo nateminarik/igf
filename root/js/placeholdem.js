@@ -1,8 +1,103 @@
-/**
- * Placeholdem - Placeholder Caret Animation
- * v1.0.1 - MIT License
- * http://placeholdem.jackrugile.com - git://github.com/jackrugile/placeholdem.git
- * by Jack Rugile - @jackrugile
- */
+function Placeholdem( elems ) {
+    "use strict";
 
-function Placeholdem(e){"use strict";!function(){for(var e=0,n=["ms","moz","webkit","o"],a=0;a<n.length&&!window.requestAnimationFrame;++a)window.requestAnimationFrame=window[n[a]+"RequestAnimationFrame"],window.cancelAnimationFrame=window[n[a]+"CancelAnimationFrame"]||window[n[a]+"CancelRequestAnimationFrame"];window.requestAnimationFrame||(window.requestAnimationFrame=function(n){var a=(new Date).getTime(),i=Math.max(0,16-(a-e)),l=window.setTimeout(function(){n(a+i)},i);return e=a+i,l}),window.cancelAnimationFrame||(window.cancelAnimationFrame=function(e){clearTimeout(e)})}();var n={};return n.init=function(){if(n.elems=[],e&&e.length)for(var a=0;a<e.length;a++)n.hasPlaceholder(e[a])&&n.elems.push(new n.PlaceholdemElem(e[a]));else e&&n.hasPlaceholder(e)&&n.elems.push(new n.PlaceholdemElem(e))},n.hasPlaceholder=function(e){return"function"==typeof e.hasAttribute&&e.hasAttribute("placeholder")},n.PlaceholdemElem=function(e){var n=this;n.init=function(){n.elem=e,n.placeholder=n.elem.getAttribute("placeholder"),n.elem.removeAttribute("placeholder"),n.rAF=null,n.animating=0,n.elem.value||(n.elem.value=n.placeholder),n.on(n.elem,"focus",n.onFocus),n.on(n.elem,"blur",n.onBlur),n.on(n.elem,"keydown",n.onKeydown)},n.on=function(e,n,a){e.addEventListener?e.addEventListener(n,a):e.attachEvent("on"+n,a)},n.onFocus=function(){(n.animating||n.elem.value===n.placeholder)&&(n.animating=1,window.cancelAnimationFrame(n.rAF),n.deletePlaceholder())},n.onBlur=function(){(n.animating||""===n.elem.value)&&(n.animating=1,window.cancelAnimationFrame(n.rAF),n.restorePlaceholder())},n.onKeydown=function(){n.animating&&(n.animating=0,window.cancelAnimationFrame(n.rAF),n.elem.value="")},n.deletePlaceholder=function(){n.elem.value.length>0?(n.elem.value=n.elem.value.slice(0,-1),n.rAF=window.requestAnimationFrame(n.deletePlaceholder)):n.animating=0},n.restorePlaceholder=function(){n.elem.value.length<n.placeholder.length?(n.elem.value+=n.placeholder[n.elem.value.length],n.rAF=window.requestAnimationFrame(n.restorePlaceholder)):n.animating=0},n.init()},n.init(),n}
+    (function(){var lastTime=0;var vendors=['ms','moz','webkit','o'];for(var x=0;x<vendors.length&&!window.requestAnimationFrame;++x){window.requestAnimationFrame=window[vendors[x]+'RequestAnimationFrame'];window.cancelAnimationFrame=window[vendors[x]+'CancelAnimationFrame']||window[vendors[x]+'CancelRequestAnimationFrame'];}if(!window.requestAnimationFrame)window.requestAnimationFrame=function(callback,element){var currTime=new Date().getTime();var timeToCall=Math.max(0,16-(currTime-lastTime));var id=window.setTimeout(function(){callback(currTime+timeToCall);},timeToCall);lastTime=currTime+timeToCall;return id;};if(!window.cancelAnimationFrame)window.cancelAnimationFrame=function(id){clearTimeout(id);};}());
+
+    var P = {};
+
+    P.init = function() {
+        P.elems = [];
+        if( elems && elems.length ) {
+            for( var i = 0 ; i < elems.length; i++ ) {
+                if( P.hasPlaceholder( elems[ i ] ) ) {
+                    P.elems.push( new P.PlaceholdemElem( elems[ i ] ) );
+                }
+            }
+        } else if( elems ) {
+            if( P.hasPlaceholder( elems ) ) {
+                P.elems.push( new P.PlaceholdemElem( elems ) );
+            }
+        }
+    };
+
+    P.hasPlaceholder = function( elem ) {
+        return ( typeof elem.hasAttribute === 'function' && elem.hasAttribute( 'placeholder' ) );
+    };
+
+    P.PlaceholdemElem = function( elem ) {
+        var PE = this;
+
+        PE.init = function() {
+            PE.elem = elem;
+            PE.placeholder = PE.elem.getAttribute( 'placeholder' );
+            PE.elem.removeAttribute( 'placeholder' );
+            PE.rAF = null;
+            PE.animating = 0;
+
+            if( !PE.elem.value ) {
+                PE.elem.value = PE.placeholder;
+            }
+
+            PE.on( PE.elem, 'focus', PE.onFocus );
+            PE.on( PE.elem, 'blur', PE.onBlur);
+            PE.on( PE.elem, 'keydown', PE.onKeydown);
+        };
+
+        PE.on = function( elem, eventType, handler ) {
+            if( elem.addEventListener ) {
+                elem.addEventListener( eventType, handler );
+            } else {
+                elem.attachEvent( 'on' + eventType, handler );
+            }
+        };
+
+        PE.onFocus = function() {
+            if( PE.animating || PE.elem.value === PE.placeholder ) {
+                PE.animating = 1;
+                window.cancelAnimationFrame( PE.rAF );
+                PE.deletePlaceholder();
+            }
+        };
+
+        PE.onBlur = function() {
+            if( PE.animating || PE.elem.value === '' ) {
+                PE.animating = 1;
+                window.cancelAnimationFrame( PE.rAF );
+                PE.restorePlaceholder();
+            }
+        };
+
+        PE.onKeydown = function() {
+            if( PE.animating ) {
+                PE.animating = 0;
+                window.cancelAnimationFrame( PE.rAF );
+                PE.elem.value = '';
+            }
+        };
+
+        PE.deletePlaceholder = function() {
+            if( PE.elem.value.length > 0 ) {
+                PE.elem.value = PE.elem.value.slice( 0, -1 );
+                PE.rAF = window.requestAnimationFrame( PE.deletePlaceholder );
+            } else {
+                PE.animating = 0;
+            }
+        };
+
+        PE.restorePlaceholder = function() {
+            if( PE.elem.value.length < PE.placeholder.length ) {
+                PE.elem.value += PE.placeholder[ PE.elem.value.length ];
+                PE.rAF = window.requestAnimationFrame( PE.restorePlaceholder );
+            } else {
+                PE.animating = 0;
+            }
+            $(elem).trigger('done');
+        };
+
+        PE.init();
+    };
+
+    P.init();
+
+    return P;
+}

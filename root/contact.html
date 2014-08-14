@@ -32,7 +32,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
 
     <!-- main styles -->
-    <link rel="stylesheet" href="css/gumby.min.css">
+    <link rel="stylesheet" href="css/gumby.css">
 
     <script src="bower_components/gumby/js/libs/modernizr-2.6.2.min.js"></script>
 
@@ -86,12 +86,12 @@
         <div class="row contacts">
             <div class="five columns">
                 <div class="contacts-form-wrp">
-                    <form class="contacts-form">
-                        <input class="input-txt" type="text" placeholder="Name"/>
-                        <input class="input-txt" type="text" placeholder="E-mail"/>
-                        <input class="input-txt" type="text" placeholder="Phone"/>
-                        <input class="input-txt" type="text" placeholder="Company"/>
-                        <input class="contacts-form-sbm toggle" type="submit" value="Submit" data-trigger=".contacts-form-wrp"/>
+                    <form id="contacts-form" class="contacts-form" autocomplete="off">
+                        <input name="name" class="input-txt" type="text" placeholder="Name"/>
+                        <input name="email" class="input-txt" type="text" placeholder="E-mail"/>
+                        <input name="phone" class="input-txt" type="text" placeholder="Phone"/>
+                        <input name="company" class="input-txt" type="text" placeholder="Company"/>
+                        <input class="contacts-form-sbm" type="submit" value="Submit" data-trigger=".contacts-form-wrp"/>
                     </form>
                     <div class="download_box">
                         <a href="New%20Customer%20Application.PDF">
@@ -101,32 +101,36 @@
                     </div>
                 </div>
             </div>
-            <div class="seven columns">
-                <div class="row">
-                    <div class="six columns">
-                        <ul class="contacts-list">
-                            <li>7520 Fullerton Road</li>
-                            <li>Springfield, Virginia 22153</li>
-                            <li>
-                                Phone:
-                                <a href="tel:7035694520">(703) 569-4520</a>
-                            </li>
-                            <li>
-                                Toll Free:
-                                <a href="tel:8005220377">(800) 522-0377</a>
-                            </li>
-                            <li>
-                                Fax:
-                                <a href="tel:7035691065">(703) 569-1065</a>
-                            </li>
-                            <li>
-                                E-mail:
-                                <a href="mailto:info@igf-inc.com">info@igf-inc.com</a>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="six columns">
-                        <div id="mapSpringfield" style="height: 185px;"></div>
+            <div class="seven columns ind-bot-2e">
+                <div class="row ind-top-0">
+                    <div class="twelve columns">
+                        <div class="contacts-list">
+                            <p class="strong text-center">Springfield, Virginia 22153, 7520 Fullerton Road</p>
+
+                            <div class="row ind-top-0">
+                                <div class="six columns">
+                                    <p>
+                                        Phone:
+                                        <a href="tel:7035694520">(703) 569-4520</a>
+                                    </p>
+                                    <p>
+                                        Toll Free:
+                                        <a href="tel:8005220377">(800) 522-0377</a>
+                                    </p>
+                                </div>
+                                <div class="six columns">
+                                    <p>
+                                        Fax:
+                                        <a href="tel:7035691065">(703) 569-1065</a>
+                                    </p>
+                                    <p>
+                                        E-mail:
+                                        <a href="mailto:info@igf-inc.com">info@igf-inc.com</a>
+                                    </p>
+                                </div>
+                            </div>
+                            <div id="mapSpringfield" style="height: 109px;"></div>
+                        </div>
                     </div>
                 </div>
             </div>
