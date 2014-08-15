@@ -304,7 +304,7 @@ $(function () {
         e.preventDefault();
 
         if (validate(rules.name, name.val(), 'Name') && validate(rules.email, email.val())) {
-            window.location.assign('New Customer Application.PDF');
+            window.location.assign('Employment-Application-Web.pdf');
         } else {
             validate(rules.name, name.val(), 'Name') ? name.removeClass('error') : name.addClass('error');
             validate(rules.email, email.val(), 'E-mail') ? email.removeClass('error') : email.addClass('error');
