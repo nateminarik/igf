@@ -725,6 +725,7 @@ $bg: #3f6633;
 .contacts-form-sbm {
   @include border-radius(5px);
   background: $bg;
+  margin-top: 1.6em;
   padding: .8em .5em;
   border: #e0cc92 1px solid;
   text-transform: uppercase;
