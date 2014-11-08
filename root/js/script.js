@@ -124,7 +124,7 @@ $(function () {
                         $(item).css('z-index', '2').addClass('moveLeft animated');
                     }
                 } else {
-                    $(item).css('z-index', '1').removeClass('moveLeft moveRight animated')
+                    $(item).css('z-index', '1').removeClass('moveLeft moveRight animated');
                 }
             });
 
@@ -132,7 +132,7 @@ $(function () {
             $(this).find('i').css('visibility', 'visible').addClass('bounceIn animated');
 
             return false;
-        })
+        });
     }
 });
 
@@ -191,15 +191,17 @@ $(function () {
             var description = $item.find('description').text();
             var address = $item.find('address').text();
             var imageurl = $item.find('mainpicture').text().trim();
+            var link = $item.find('link').text();
             var html = "";
             var footerhtml = "";
 
             if (imageurl === "") {
                 html = '<h2 class="event-title">' + title + '</h2>';
                 html += '<p class="italic">' + date + '</p>';
-                html += '<div id="map'+ counter +'" style="height: 250px" class="map"></div>';
+                html += '<div id="map'+ counter +'" style="height: 350px" class="map"></div>';
                 html +=  description;
                 html += '<p class="address-box">' + address + '</p>';
+                html += '<div class="medium primary btn"><a href="' + link + '">Register</a></div>';
 
                 if (counter < 1) {
                     footerhtml = '<span id="footer-recent">';
@@ -235,6 +237,7 @@ $(function () {
                 html += '<img alt="" src="img/events/' + imageurl + '" />';
                 html +=  description;
                 html += '<p class="address-box">' + address + '</p>';
+                html += '<div class="medium primary btn"><a href="' + link + '">Register</a></div>';
                 if (counter < 1) {
                     footerhtml = '<span id="footer-recent">';
                     footerhtml += '<a href="events.html"><span class="title one-row">' + title + '</span></a>';
@@ -316,11 +319,6 @@ $(function () {
     }
 
 });
-
-
-
-
-
 
 
 
