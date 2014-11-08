@@ -613,7 +613,7 @@ ul.inline-list {
   overflow: hidden;
 }
 
-@include keyframes(moveRight) {
+/*@include keyframes(moveRight) {
   0% {
     @include translateX(50px);
   }
@@ -629,7 +629,7 @@ ul.inline-list {
   100% {
     @include translateX(0);
   }
-}
+}*/
 
 /*.moveRight {
   @include animation(moveRight 1s)
@@ -637,7 +637,7 @@ ul.inline-list {
 
 .moveLeft {
   @include animation(moveLeft 1s)
-}
+}*/
 
 .products-slogan {
   margin: 0;
