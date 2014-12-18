@@ -623,7 +623,7 @@ display: inline-block;
   overflow: hidden;
 }*/
 
-/*@include keyframes(moveRight) {
+@include keyframes(moveRight) {
   0% {
     @include translateX(50px);
   }
@@ -639,15 +639,15 @@ display: inline-block;
   100% {
     @include translateX(0);
   }
-}*/
+}
 
-/*.moveRight {
+.moveRight {
   @include animation(moveRight 1s)
 }
 
 .moveLeft {
   @include animation(moveLeft 1s)
-}*/
+}
 
 .products-slogan {
   margin: auto;

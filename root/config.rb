@@ -1,4 +1,5 @@
 # Require any additional compass plugins here.
+# if error gets thrown on compass watch, run 'gem install animation --pre'
 require 'animation'
 
 # Tell compass where to find local extensions
