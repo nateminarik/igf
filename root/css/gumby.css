@@ -1,4 +1,4 @@
-@charset "IBM437";
+@charset "UTF-8";
 /**
 * Gumby Framework
 * ---------------
@@ -2984,7 +2984,7 @@ ul.inline-list li i:hover { color: #e0cc92; }
 /*-------- footer -----------*/
 .footer { padding: 1.5em 0 1.2em; width: 100%; background: #1b397f; border-top: #be872c 4px solid; color: #fff; font-family: "nerislight"; }
 .footer #footeroutput { width: 100%; display: block; margin-bottom: 1em; }
-.footer #footeroutput span.title { margin: 0 auto; font-size: 1.2em; font-family: "nerislight"; display: block; text-align: left; text-decoration: underline; height: 1.5em; }
+.footer #footeroutput span.title { position: relative; margin: 0 auto; font-size: 1.2em; font-family: "nerislight"; display: block; text-align: left; text-decoration: underline; height: 1.5em; color: #fff; top: 0; left: 0; padding: 0; z-index: 1; }
 .footer #footeroutput p { margin: 0 auto; color: #fff; float: left; display: block; text-align: justify; font-family: "nerislight"; line-height: 1.3em; }
 .footer #footeroutput p img { padding: 0.1em 0.7em 0.1em 0; max-width: 43%; float: left; }
 .footer #footeroutput p a { display: inline; padding: 0 0.3em; margin: auto 0; float: none; font-size: 1em; text-decoration: underline; }
