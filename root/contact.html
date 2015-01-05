@@ -35,6 +35,7 @@
     <link rel="stylesheet" href="css/gumby.css">
 
     <script src="bower_components/gumby/js/libs/modernizr-2.6.2.min.js"></script>
+    <script src='https://www.google.com/recaptcha/api.js'></script>
 
 </head>
 
@@ -85,30 +86,34 @@
         </div>
         <div class="row contacts">
             <div class="six columns">
-                <h3>New Customer Application Form</h3>
+                <h3>For General Inquiries...</h3>
                 <div class="contacts-form-wrp">
-                    <form id="contacts-form" class="contacts-form" autocomplete="off">
-                        <input name="name" class="input-txt" type="text" placeholder="Name"/>
-                        <input name="email" class="input-txt" type="text" placeholder="E-mail"/>
-                        <input name="phone" class="input-txt" type="text" placeholder="Phone"/>
-                        <input name="company" class="input-txt" type="text" placeholder="Company"/>
+                    <form id="contacts-form" class="contacts-form" autocomplete="off" method="post">
+                        <ul>
+                            <li class="field">
+                                <input name="name" type="text" class="input" placeholder="Name">
+                            </li>
+                            <li class="field">
+                                <input name="email" type="email" class="input" placeholder="E-mail">
+                            </li>
+                            <li class="field">
+                                <input name="phone" type="text" class="input" placeholder="Phone">
+                            </li>
+                            <li class="field">
+                                <textarea name="comments" type="text" class="input textarea" placeholder="Comments"></textarea>
+                            </li>
+                        </ul>
+                        <div class="row" style="padding-top:0;">
+                            <div class="g-recaptcha nine columns push_two" data-sitekey="6Lfu3f8SAAAAAG5BtQlB53J-0wCv4tCgabY5s0pl"></div>
+                        </div>
                         <input class="contacts-form-sbm" type="submit" value="Submit" data-trigger=".contacts-form-wrp"/>
                     </form>
-                    <div class="download_box">
-                        <a href="New%20Customer%20Application.PDF">
-                            <img src="img/contact/New%20Customer%20Application%20Cover.jpg" alt=""/>
-                        </a>
-                        <a class="download_box_file" href="New%20Customer%20Application.PDF">Download</a>
-                    </div>
                 </div>
-                <p>
-                    After providing your credentials, you will be presented with our New Customer Application Form. To save the Application, look in the lower right hand corner for the floppy disc icon and click it to start the download. Print it, fill it out, and scan it, and email it back to us at info@igf-inc.com and we will begin the process to show you our catalog and start ordering. Thank you for choosing IGF! We are excited to share our food items of unsurpassed quality with customers like you.
-                </p>
             </div>
             <div class="six columns ind-bot-2e">
                 <div class="row ind-top-0">
                     <div class="twelve columns">
-                        <h3>For General Inquiries...</h3>
+                        <h3>Company Information</h3>
                         <div class="contacts-list">
                             <p class="strong text-center">7520 Fullerton Rd. Springfield, Virginia 22153</p>
 
@@ -134,10 +139,29 @@
                                     </p>
                                 </div>
                             </div>
-                            <div id="mapSpringfield" style="height: 475px;"></div>
+                            <div id="mapSpringfield" style="height: 310px;"></div>
                         </div>
                     </div>
                 </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="callout">
+                <div class="callout-para">
+                    <p>New Customer Application Form Download</p>
+                </div>
+                <div class="callout-btn">
+                    <div class="medium primary btn">
+                        <a href="New%20Customer%20Application.PDF">View Application</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="twelve columns">
+                <p>
+                    After clicking the "View Application" button, you will be directed to our New Customer Application. To save the Application, look in the lower right hand corner for the floppy disc icon and click it to start the download. Print it, fill it out, and scan it, and email it back to us at info@igf-inc.com and we will begin the process to show you our catalog and start ordering. Thank you for choosing IGF! We are excited to share our food items of unsurpassed quality with customers like you.
+                </p>
             </div>
         </div>
     </div><!-- end shadow -->
@@ -157,7 +181,7 @@
                     <ul>
                         <li class="text-center"><a href="products.html">Products</a></li>
                         <li class="text-center"><a href="contact.html">Contact Us</a></li>
-                    </ul>   
+                    </ul>
                 </div>
                 <div class="six columns">
                     <ul>

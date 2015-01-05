@@ -58,7 +58,7 @@ $(function () {
             el: '#mapSpringfield',
             lat: 38.743830,
             lng: -77.202341,
-            zoom: 17,
+            zoom: 15,
             disableDefaultUI: true
         });
         mapSpringfield.addMarker({
@@ -258,10 +258,9 @@ $(function () {
     var name = $('[name="name"]');
     var email = $('[name="email"]');
     var phone = $('[name="phone"]');
-    var company = $('[name="company"]');
+    var comments = $('[name="comments"]');
     var contactsForm = $('#contacts-form');
-    var applicationForm = $('#application-form');
-    var download = $('.download_box');
+    var dataString = '&name=' + name.val() + '&email=' + email.val() + '&phone=' + phone.val() + '&comments=' + comments.val();
     var rules = {
         name: /^[a-z ,.'-]+$/i,
         email: /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/,
@@ -272,15 +271,14 @@ $(function () {
     name.on('blur done', function () {
         validate(rules.name, name.val(), 'Name') ? name.removeClass('error') : name.addClass('error');
     });
-
     email.on('blur done', function () {
         validate(rules.email, email.val(), 'E-mail') ? email.removeClass('error') : email.addClass('error');
     });
     phone.on('blur done', function () {
         validate(rules.phone, phone.val(), 'Phone') ? phone.removeClass('error') : phone.addClass('error');
     });
-    company.on('blur done', function () {
-        validate(rules.any, company.val(), 'Company') ? company.removeClass('error') : company.addClass('error') ;
+    comments.on('blur done', function () {
+        validate(rules.any, comments.val(), 'Comments') ? comments.removeClass('error') : comments.addClass('error');
     });
 
 
@@ -291,52 +289,29 @@ $(function () {
             validate(rules.name, name.val(), 'Name') &&
             validate(rules.email, email.val(), 'E-mail') &&
             validate(rules.phone, phone.val(), 'Phone') &&
-            validate(rules.any, company.val(), 'Company')
+            validate(rules.any, comments.val(), 'Comments')
             ) {
-            contactsForm.css('display', 'none');
-            download.css('display', 'block');
+                $.ajax({
+                    type: "POST",
+                    url: "sendmail.php",
+                    data: dataString,
+                    success: function(res){
+                        // $("#successmessage").fadeIn(1000);
+                        // response = res.responseText;
+                    }
+                });
         } else {
             validate(rules.name, name.val(), 'Name') ? name.removeClass('error') : name.addClass('error');
             validate(rules.email, email.val(), 'E-mail') ? email.removeClass('error') : email.addClass('error');
             validate(rules.phone, phone.val(), 'Phone') ? phone.removeClass('error') : phone.addClass('error');
-            validate(rules.any, company.val(), 'Company') ? company.removeClass('error') : company.addClass('error');
+            validate(rules.any, comments.val(), 'Comments') ? comments.removeClass('error') : comments.addClass('error');
         }
     });
 
-    applicationForm.on('submit', function (e) {
-        e.preventDefault();
-
-        if (validate(rules.name, name.val(), 'Name') && validate(rules.email, email.val())) {
-            window.location.assign('Employment-Application-Web.pdf');
-        } else {
-            validate(rules.name, name.val(), 'Name') ? name.removeClass('error') : name.addClass('error');
-            validate(rules.email, email.val(), 'E-mail') ? email.removeClass('error') : email.addClass('error');
-        }
-    });
-
-    function validate (reg, str, holder) {
+    function validate (reg, str, holder) {// reg = regular expression, str = the field name.val(), holder = placeholder string
         return reg.test(str) && !!(str.length) && str != holder;
     }
 
 });
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
