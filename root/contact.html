@@ -255,7 +255,7 @@
 <script type="text/javascript">
     function downloadJSAtOnload() {
         var element = document.createElement("script");
-        element.src = "js/libs/gumby.min.js";
+        element.src = "js/gumby.min.js";
         document.body.appendChild(element);
     }
     if (window.addEventListener)
@@ -264,6 +264,7 @@
         window.attachEvent("onload", downloadJSAtOnload);
     else window.onload = downloadJSAtOnload;
 </script>
+
 
 <script src="bower_components/gumby/js/plugins.js"></script>
 <script src="bower_components/gumby/js/main.js"></script>

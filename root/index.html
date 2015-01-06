@@ -516,18 +516,19 @@
 	<script src="js/gumby.min.js"></script>
 
 
-	<script type="text/javascript">
+<script type="text/javascript">
 	function downloadJSAtOnload() {
-	var element = document.createElement("script");
-	element.src = "js/libs/gumby.min.js";
-	document.body.appendChild(element);
+		var element = document.createElement("script");
+		element.src = "js/gumby.min.js";
+		document.body.appendChild(element);
 	}
 	if (window.addEventListener)
-	window.addEventListener("load", downloadJSAtOnload, false);
+		window.addEventListener("load", downloadJSAtOnload, false);
 	else if (window.attachEvent)
-	window.attachEvent("onload", downloadJSAtOnload);
+		window.attachEvent("onload", downloadJSAtOnload);
 	else window.onload = downloadJSAtOnload;
-	</script>
+</script>
+
 
 	<script src="bower_components/gumby/js/plugins.js"></script>
 	<script src="bower_components/gumby/js/main.js"></script>
