@@ -2930,7 +2930,7 @@ table.rounded thead th, table.rounded thead td, table.rounded caption + tbody tr
 @media only screen and (min-width: 768px) { .top-section { margin-top: 24px; margin-left: -1em; font-size: 2em; } }
 @media only screen and (min-width: 960px) { .top-section { margin-top: 0.5em; margin-left: auto; font-size: 2.4em; } }
 
-.bottom-section-slogan { display: block; padding-right: 35%; color: #333333; font-size: 2em; font-family: "Rage Italic"; line-height: 2em; /*should be 1 !!!!!*/ }
+.bottom-section-slogan { display: block; padding-right: 35%; color: #333333; font-size: 2em; font-family: "Rage Italic"; line-height: 1.1em; /*should be 1 !!!!!*/ padding-top: 25px; margin-top: -16px; }
 @media only screen and (max-width: 768px) { .bottom-section-slogan { padding-right: 0; } }
 
 ul.inline-list li { display: inline; float: right; }
@@ -3148,24 +3148,33 @@ ul.inline-list li i:hover { color: #e0cc92; }
 @media only screen and (min-width: 1824px) { /* Styles */ }
 /* iPhone 4 ----------- */
 @media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min-device-pixel-ratio: 1.5) { /* Styles */ }
-.title { height: auto; width: auto; background: rgba(0, 0, 0, 0); color: black; top: 5px; left: 5px; padding: 3px; z-index: 2; position: absolute; text-align: center; display: inline-block; font-size: 1em; -webkit-transition: all 400ms; -moz-transition: all 400ms; transition: all 400ms; }
+.bottom-section-slogan { line-height: 1.1; margin-top: -16px; padding-top: 25px; }
 
-.roll-up { background: rgba(10, 10, 100, 0.8); position: absolute; color: white; padding: 0 10px 5px; text-align: center; height: 100%; z-index: 1; left: 0; right: 0; top: 0; opacity: 0; }
+.products-slogan { text-align: center; }
 
-.roll-up p { -webkit-transition: all 400ms; -moz-transition: all 400ms; transition: all 400ms; font-size: 1em; margin-top: 400px; line-height: 1; }
-
-/* Transistions and Images within grid ================================ */
-.four { overflow: hidden; position: relative; }
-
-.prod-container img { display: block; height: auto; -webkit-transition: all 400ms; -moz-transition: all 400ms; transition: all 400ms; max-width: 100%; }
-
-.prod-container:hover > img { -webkit-transform: scale(1.4); -moz-transform: scale(1.4); transform: scale(1.4); }
-
-.prod-container:hover > .roll-up { opacity: 1; }
-
-.prod-container:hover > .roll-up p { margin-top: 100px; }
-
-.prod-container:hover > .title { font-size: 2em; left: 55px; color: white; }
+.prod-container { margin: 10px auto; position: relative; overflow: hidden; border-left: 5px solid rgba(240, 218, 177, 0.8); border-right: 5px solid rgba(240, 218, 177, 0.8); border-radius: 7px 7px 0 0; }
+.columns:first-child .prod-container { margin: 0 auto; padding: 0; }
+.prod-container .title { display: inline-block; width: 100%; height: 40px; background-color: rgba(240, 218, 177, 0.8); }
+.prod-container .title .titletext { top: 0; left: 0; right: 0; bottom: 0; text-align: center; }
+.prod-container .roll-up { background-color: rgba(240, 218, 177, 0.8); padding: 15px 5px; margin-top: -10px; }
+.prod-container .roll-up p { text-align: center; font-size: .8em; }
+@media only screen and (min-width: 480px) { .prod-container .roll-up p { font-size: .95em; line-height: 1.2; } }
+@media only screen and (min-width: 600px) { .prod-container .roll-up p { font-size: 1em; line-height: 1.3; } }
+.prod-container .roll-up .btn { margin-left: 31%; }
+@media only screen and (min-width: 480px) { .prod-container .roll-up .btn { margin-left: 38%; } }
+@media only screen and (min-width: 600px) { .prod-container .roll-up .btn { margin-left: 40%; } }
+@media only screen and (min-width: 769px) { .prod-container .roll-up .btn { margin-left: 1%; } }
+@media only screen and (min-width: 769px) { .prod-container { border: none; /* Transistions and Images within grid ================================ */ }
+  .columns:first-child .prod-container { margin: 10px auto; }
+  .prod-container .btn { margin-left: 1%; }
+  .prod-container .title { height: auto; width: auto; background: rgba(0, 0, 0, 0); color: black; top: 5px; left: 5px; padding: 3px; z-index: 2; position: absolute; font-size: 1em; -webkit-transition: all 400ms; -moz-transition: all 400ms; transition: all 400ms; }
+  .prod-container .roll-up { background: rgba(10, 10, 100, 0.8); position: absolute; color: white; margin: 0 auto; padding: 0 10px 5px; text-align: center; height: 100%; z-index: 1; left: 0; right: 0; top: 0; opacity: 0; }
+  .prod-container .roll-up p { -webkit-transition: all 400ms; -moz-transition: all 400ms; transition: all 400ms; font-size: 1em; margin-top: 400px; line-height: 1; }
+  .prod-container img { display: block; height: auto; -webkit-transition: all 400ms; -moz-transition: all 400ms; transition: all 400ms; max-width: 100%; }
+  .prod-container:hover > img { -webkit-transform: scale(1.4); -moz-transform: scale(1.4); transform: scale(1.4); }
+  .prod-container:hover > .roll-up { opacity: 1; }
+  .prod-container:hover > .roll-up p { margin-top: 100px; }
+  .prod-container:hover > .title { font-size: 2em; left: 55px; color: white; } }
 
 .txt-middle { font-size: 1.7em; }
 
