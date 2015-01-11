@@ -285,4 +285,20 @@ $(function () {
 
 });
 
+$(".fancybox").fancybox({
+    helpers : {
+        title: {
+            type: 'inside'
+        }
+    }
+});
+
+if (window.innerWidth >= 801) {
+    var descriptionArray = $('.roll-up p');
+    $.each(descriptionArray, function(key, value){
+        if (value.innerHTML.length >= 120){
+            value.innerHTML = value.innerHTML.substring(0, 120) + '...';
+        }
+    });
+}
 
