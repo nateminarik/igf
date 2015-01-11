@@ -108,35 +108,6 @@ $(function () {
 
 });
 
-
-// $(function () {
-//     if ($('#products').length) {
-//         var links = $('.product-links');
-//         var images = $('.product-images img');
-
-//         $(links).on('mouseover', '.products-list li', function () {
-//             var current = $(this).data('index');
-//             images.each(function(i, item) {
-//                 if ($(item).data('index') == current) {
-//                     if (current % 2 === 0) {
-//                         $(item).css('z-index', '2').addClass('moveRight animated');
-//                     } else {
-//                         $(item).css('z-index', '2').addClass('moveLeft animated');
-//                     }
-//                 } else {
-//                     $(item).css('z-index', '1').removeClass('moveLeft moveRight animated');
-//                 }
-//             });
-
-//             $(links).find('li i').css('visibility', 'hidden').removeClass('bounceIn animated');
-//             $(this).find('i').css('visibility', 'visible').addClass('bounceIn animated');
-
-//             return false;
-//         });
-//     }
-// });
-
-
 $(function () {
     Placeholdem($('[placeholder]'));
 });

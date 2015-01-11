@@ -6,27 +6,46 @@
         <description>Get the latest on events we showcase and promotional offers </description>
 
         <item>
-            <date>Thursday, August 14th, 2014</date>
-            <title>Product Showcase</title>
+            <date>Tuesday, April 21st, 2015</date>
+            <title>Metropolitan DC Area Product Showcase</title>
             <mainpicture></mainpicture>
             <description>
                 <![CDATA[
             <p>
-               Trade Only Please
+               Waterford Receptions
             </p>
             <p>
-                Crowne Plaza – Atlanta Perimeter at Ravinia | Ballroom
-            </p>
-            <p>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Join us in celebration of our 8th year in Georgia! We are featuring more than 50 vendors from around the world, with more than a 1,000 products on display and most available for you to try!
+                Not open to the general public
             </p>
           ]]>
             </description>
             <address>
-                840, South Spring Street, Los Angeles
+                6715 Commerce Street, Springfield, VA 22150
             </address>
             <link>
-                http://google.com
+                
+            </link>
+        </item>
+
+        <item>
+            <date>Monday, August 31st, 2015</date>
+            <title>Charlotte, North Carolina Product Showcase</title>
+            <mainpicture></mainpicture>
+            <description>
+                <![CDATA[
+            <p>
+               The Westin – Charlotte
+            </p>
+            <p>
+                Not open to the general public
+            </p>
+          ]]>
+            </description>
+            <address>
+                601 South College Street, Charlotte, NC 28202
+            </address>
+            <link>
+                
             </link>
         </item>
 
