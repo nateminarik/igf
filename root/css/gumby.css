@@ -1,4 +1,4 @@
-@charset "UTF-8";
+@charset "IBM437";
 /**
 * Gumby Framework
 * ---------------
@@ -3166,7 +3166,7 @@ width: 100%;*/
   .prod-container img { display: block; height: auto; -webkit-transition: all 400ms; -moz-transition: all 400ms; transition: all 400ms; max-width: 100%; }
   .prod-container:hover > img { -webkit-transform: scale(1.4); -moz-transform: scale(1.4); transform: scale(1.4); }
   .prod-container:hover > .roll-up { opacity: 1; }
-  .prod-container:hover > .roll-up p { margin-top: 120px; }
+  .prod-container:hover > .roll-up p { margin-top: 100px; }
   .prod-container:hover > .title { font-size: 1em; top: 25px; color: white; } }
 
 .txt-middle { font-size: 1.7em; }
