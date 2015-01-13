@@ -1,4 +1,4 @@
-@charset "IBM437";
+@charset "UTF-8";
 /**
 * Gumby Framework
 * ---------------
@@ -3121,9 +3121,22 @@ ul.inline-list li i:hover { color: #e0cc92; }
 .contacts-form-wrp .input-txt.error { -webkit-box-shadow: #eab1b1 0px 0px 5px inset; -moz-box-shadow: #eab1b1 0px 0px 5px inset; box-shadow: #eab1b1 0px 0px 5px inset; border-color: #ca3838; }
 .contacts-form-wrp .input-txt:focus { -webkit-box-shadow: #deb572 0px 0px 10px inset; -moz-box-shadow: #deb572 0px 0px 10px inset; box-shadow: #deb572 0px 0px 10px inset; border-color: #845e1f; color: #333333; }
 
-.contacts-form-sbm, .download_box_file { -webkit-border-radius: 5px; -moz-border-radius: 5px; -ms-border-radius: 5px; -o-border-radius: 5px; border-radius: 5px; background: #3f6633; margin-top: 1.6em; padding: .8em .5em; border: #e0cc92 1px solid; text-transform: uppercase; color: #ffffff !important; font: 700 13px Arial, sans-serif; text-align: center; line-height: 1.2; cursor: pointer; display: inline-block; width: 100%; }
-.contacts-form-sbm:hover, .download_box_file:hover { background: #4a773c; border-color: #fff; color: #e0cc92; }
-.contacts-form-sbm:active, .download_box_file:active, .contacts-form-sbm:focus, .download_box_file:focus { background: #35552b; border-color: #fff; color: #e0cc92; outline: none; }
+/*@include border-radius(5px);
+background: $bg;
+margin-top: 1.6em;
+padding: .8em .5em;
+border: #e0cc92 1px solid;
+text-transform: uppercase;
+color: #ffffff !important;
+font: 700 13px Arial, sans-serif;
+text-align: center;
+line-height: 1.2;
+cursor: pointer;
+display: inline-block;
+width: 100%;*/
+.contacts-form-sbm, .download_box_file { margin: 1.6em auto 1.6em; padding: .8em .5em; display: block; background: #102962; border: #e0cc92 1px solid; -webkit-border-radius: 5px 5px; -moz-border-radius: 5px / 5px; border-radius: 5px / 5px; text-align: center; color: #eee; font-family: "nerisblack"; font-size: 13px; font-weight: 700; width: 100%; line-height: 1.2; }
+.contacts-form-sbm:hover, .download_box_file:hover { background: #0d60a4; border: #fff 1px solid; color: #e0cc92; }
+.contacts-form-sbm:active, .download_box_file:active, .contacts-form-sbm:focus, .download_box_file:focus { background: #0b528c; border-color: #fff; color: #0d60a4; outline: none; }
 
 .download_box { display: none; }
 
@@ -3147,14 +3160,14 @@ ul.inline-list li i:hover { color: #e0cc92; }
 @media only screen and (min-width: 769px) { .prod-container { border: none; border-radius: 0; /* Transistions and Images within grid ================================ */ }
   .columns:first-child .prod-container { margin: 10px auto; }
   .prod-container .btn { margin-left: 1%; }
-  .prod-container .title { height: auto; width: auto; background: rgba(0, 0, 0, 0); color: black; margin: 0 auto; width: 100%; padding: 3px; z-index: 2; position: relative; color: rgba(10, 10, 100, 0.8); font-size: 1.25em; -webkit-transition: all 400ms; -moz-transition: all 400ms; transition: all 400ms; }
+  .prod-container .title { height: auto; width: auto; background: rgba(0, 0, 0, 0); color: black; margin: 0 auto; width: 100%; padding: 3px; z-index: 2; position: relative; color: rgba(10, 10, 100, 0.8); font-size: 0.9em; -webkit-transition: all 400ms; -moz-transition: all 400ms; transition: all 400ms; }
   .prod-container .roll-up { background: rgba(10, 10, 100, 0.8); position: absolute; color: white; padding: 0 10px 5px; bottom: 0; text-align: center; height: 100%; z-index: 1; opacity: 0; }
   .prod-container .roll-up p { -webkit-transition: all 400ms; -moz-transition: all 400ms; transition: all 400ms; font-size: 1.1em; line-height: 1; }
   .prod-container img { display: block; height: auto; -webkit-transition: all 400ms; -moz-transition: all 400ms; transition: all 400ms; max-width: 100%; }
   .prod-container:hover > img { -webkit-transform: scale(1.4); -moz-transform: scale(1.4); transform: scale(1.4); }
   .prod-container:hover > .roll-up { opacity: 1; }
   .prod-container:hover > .roll-up p { margin-top: 120px; }
-  .prod-container:hover > .title { font-size: 1.5em; top: 25px; color: white; } }
+  .prod-container:hover > .title { font-size: 1em; top: 25px; color: white; } }
 
 .txt-middle { font-size: 1.7em; }
 
