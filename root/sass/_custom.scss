@@ -730,20 +730,6 @@ $bg: #3f6633;
   }
 }
 
-  /*@include border-radius(5px);
-  background: $bg;
-  margin-top: 1.6em;
-  padding: .8em .5em;
-  border: #e0cc92 1px solid;
-  text-transform: uppercase;
-  color: #ffffff !important;
-  font: 700 13px Arial, sans-serif;
-  text-align: center;
-  line-height: 1.2;
-  cursor: pointer;
-  display: inline-block;
-  width: 100%;*/
-
 .contacts-form-sbm {
   margin: 1.6em auto 1.6em;
   padding: .8em .5em;
@@ -822,6 +808,7 @@ $bg: #3f6633;
     height: 40px;
     background-color: rgba(240,218,177,0.8);
     text-align: center;
+    font-family: Times, serif;
     .titletext {
       top: 0;
       left: 0;

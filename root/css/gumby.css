@@ -3121,19 +3121,6 @@ ul.inline-list li i:hover { color: #e0cc92; }
 .contacts-form-wrp .input-txt.error { -webkit-box-shadow: #eab1b1 0px 0px 5px inset; -moz-box-shadow: #eab1b1 0px 0px 5px inset; box-shadow: #eab1b1 0px 0px 5px inset; border-color: #ca3838; }
 .contacts-form-wrp .input-txt:focus { -webkit-box-shadow: #deb572 0px 0px 10px inset; -moz-box-shadow: #deb572 0px 0px 10px inset; box-shadow: #deb572 0px 0px 10px inset; border-color: #845e1f; color: #333333; }
 
-/*@include border-radius(5px);
-background: $bg;
-margin-top: 1.6em;
-padding: .8em .5em;
-border: #e0cc92 1px solid;
-text-transform: uppercase;
-color: #ffffff !important;
-font: 700 13px Arial, sans-serif;
-text-align: center;
-line-height: 1.2;
-cursor: pointer;
-display: inline-block;
-width: 100%;*/
 .contacts-form-sbm, .download_box_file { margin: 1.6em auto 1.6em; padding: .8em .5em; display: block; background: #102962; border: #e0cc92 1px solid; -webkit-border-radius: 5px 5px; -moz-border-radius: 5px / 5px; border-radius: 5px / 5px; text-align: center; color: #eee; font-family: "nerisblack"; font-size: 13px; font-weight: 700; width: 100%; line-height: 1.2; }
 .contacts-form-sbm:hover, .download_box_file:hover { background: #0d60a4; border: #fff 1px solid; color: #e0cc92; }
 .contacts-form-sbm:active, .download_box_file:active, .contacts-form-sbm:focus, .download_box_file:focus { background: #0b528c; border-color: #fff; color: #0d60a4; outline: none; }
@@ -3147,7 +3134,7 @@ width: 100%;*/
 
 .prod-container { margin: 10px auto; position: relative; overflow: hidden; border-left: 5px solid rgba(240, 218, 177, 0.8); border-right: 5px solid rgba(240, 218, 177, 0.8); border-radius: 7px 7px 0 0; }
 .columns:first-child .prod-container { margin: 0 auto; padding: 0; }
-.prod-container .title { display: inline-block; width: 100%; height: 40px; background-color: rgba(240, 218, 177, 0.8); text-align: center; }
+.prod-container .title { display: inline-block; width: 100%; height: 40px; background-color: rgba(240, 218, 177, 0.8); text-align: center; font-family: Times, serif; }
 .prod-container .title .titletext { top: 0; left: 0; right: 0; bottom: 0; text-align: center; }
 .prod-container .roll-up { background-color: rgba(240, 218, 177, 0.8); padding: 15px 5px; margin-top: -10px; }
 .prod-container .roll-up p { text-align: center; font-size: .8em; }
