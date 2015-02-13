@@ -172,7 +172,7 @@ $(function () {
                 html += '<div id="map'+ counter +'" style="height: 350px" class="map"></div>';
                 html +=  description;
                 html += '<p class="address-box">' + address + '</p>';
-                html += '<div class="medium primary btn"><a href="' + link + '">Register</a></div>';
+                html += '<div class="medium primary btn"><a href="' + link + '">Register</a></div><br /><br /><hr>';
 
                 if (counter < 1) {
                     footerhtml = '<span id="footer-recent">';
@@ -208,7 +208,7 @@ $(function () {
                 html += '<img alt="" src="img/events/' + imageurl + '" />';
                 html +=  description;
                 html += '<p class="address-box">' + address + '</p>';
-                html += '<div class="medium primary btn"><a href="' + link + '">Register</a></div>';
+                html += '<div class="medium primary btn"><a href="' + link + '">Register</a></div><br /><br /><hr>';
                 if (counter < 1) {
                     footerhtml = '<span id="footer-recent">';
                     footerhtml += '<a href="events.html"><span class="title one-row">' + title + '</span></a>';
@@ -231,7 +231,6 @@ $(function () {
     var phone = $('[name="phone"]');
     var comments = $('[name="comments"]');
     var contactsForm = $('#contacts-form');
-    var dataString = '&name=' + name.val() + '&email=' + email.val() + '&phone=' + phone.val() + '&comments=' + comments.val();
     var rules = {
         name: /^[a-z ,.'-]+$/i,
         email: /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/,
@@ -262,13 +261,18 @@ $(function () {
             validate(rules.phone, phone.val(), 'Phone') &&
             validate(rules.any, comments.val(), 'Comments')
             ) {
+                var gResponse = $('#g-recaptcha-response');
+                var dataString = '&g-recaptcha-response=' + gResponse.val() + '&name=' + name.val() + '&email=' + email.val() + '&phone=' + phone.val() + '&comments=' + comments.val();
+
                 $.ajax({
                     type: "POST",
-                    url: "sendmail.php",
+                    url: "./sendmail.php",
                     data: dataString,
                     success: function(res){
-                        // $("#successmessage").fadeIn(1000);
-                        // response = res.responseText;
+                        var response = res.responseText;
+                        if (response === undefined) {
+                            alert('Did not send. Please bear with us as we iron out the kinks.');
+                        } else {alert(response);}
                     }
                 });
         } else {
